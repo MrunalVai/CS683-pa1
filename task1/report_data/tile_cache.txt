@@ -1,0 +1,630 @@
+================ TILE=8 ================
+SIZE=256 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           1.112        1.06      1.00x
+tile            yes           0.337        3.50      3.30x
+
+ Performance counter stats for './bin/conv tile 256 256 3':
+
+        92,355,421      cpu_atom/instructions/                                                
+     <not counted>      cpu_core/instructions/                                                  (0.00%)
+        31,381,289      cpu_atom/cycles/                                                      
+     <not counted>      cpu_core/cycles/                                                        (0.00%)
+        23,007,721      cpu_atom/L1-dcache-loads/                                             
+     <not counted>      cpu_core/L1-dcache-loads/                                               (0.00%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+     <not counted>      cpu_core/L1-dcache-load-misses/                                         (0.00%)
+
+       0.021933641 seconds time elapsed
+
+       0.018980000 seconds user
+       0.002996000 seconds sys
+
+
+SIZE=512 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           3.043        1.55      1.00x
+tile            yes           1.040        4.54      2.93x
+
+ Performance counter stats for './bin/conv tile 512 512 3':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+       359,253,310      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+        80,652,078      cpu_core/cycles/                                                      
+     <not counted>      cpu_atom/L1-dcache-loads/                                               (0.00%)
+        89,429,950      cpu_core/L1-dcache-loads/                                             
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           102,207      cpu_core/L1-dcache-load-misses/                                       
+
+       0.054753179 seconds time elapsed
+
+       0.048535000 seconds user
+       0.006066000 seconds sys
+
+
+SIZE=1024 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          28.384        0.66      1.00x
+tile            yes           6.963        2.71      4.08x
+
+ Performance counter stats for './bin/conv tile 1024 1024 3':
+
+     1,182,713,957      cpu_atom/instructions/                                                  (72.70%)
+     2,084,138,099      cpu_core/instructions/                                                  (27.30%)
+       374,026,147      cpu_atom/cycles/                                                        (72.70%)
+       510,671,499      cpu_core/cycles/                                                        (27.30%)
+       337,216,886      cpu_atom/L1-dcache-loads/                                               (72.70%)
+       404,643,708      cpu_core/L1-dcache-loads/                                               (27.30%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           843,187      cpu_core/L1-dcache-load-misses/                                         (27.30%)
+
+       0.332796659 seconds time elapsed
+
+       0.314676000 seconds user
+       0.016982000 seconds sys
+
+
+SIZE=2048 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          48.250        1.56      1.00x
+tile            yes          18.889        4.00      2.55x
+
+ Performance counter stats for './bin/conv tile 2048 2048 3':
+
+     3,465,132,382      cpu_atom/instructions/                                                  (18.97%)
+     6,230,243,072      cpu_core/instructions/                                                  (81.03%)
+     1,156,874,773      cpu_atom/cycles/                                                        (18.97%)
+     1,370,437,744      cpu_core/cycles/                                                        (81.03%)
+       790,053,228      cpu_atom/L1-dcache-loads/                                               (18.97%)
+     1,567,317,194      cpu_core/L1-dcache-loads/                                               (81.03%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         2,472,763      cpu_core/L1-dcache-load-misses/                                         (81.03%)
+
+       1.071378602 seconds time elapsed
+
+       0.979646000 seconds user
+       0.084710000 seconds sys
+
+
+================ TILE=16 ================
+SIZE=256 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           1.225        0.96      1.00x
+tile            yes           0.402        2.94      3.05x
+
+ Performance counter stats for './bin/conv tile 256 256 3':
+
+        80,724,352      cpu_atom/instructions/                                                  (4.18%)
+        91,507,506      cpu_core/instructions/                                                  (95.82%)
+        23,945,657      cpu_atom/cycles/                                                        (4.18%)
+        22,673,702      cpu_core/cycles/                                                        (95.82%)
+        15,983,718      cpu_atom/L1-dcache-loads/                                               (4.18%)
+        22,644,090      cpu_core/L1-dcache-loads/                                               (95.82%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+            52,030      cpu_core/L1-dcache-load-misses/                                         (95.82%)
+
+       0.027513486 seconds time elapsed
+
+       0.022131000 seconds user
+       0.005029000 seconds sys
+
+
+SIZE=512 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           4.652        1.01      1.00x
+tile            yes           1.877        2.51      2.48x
+
+ Performance counter stats for './bin/conv tile 512 512 3':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+       353,894,175      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+        78,901,263      cpu_core/cycles/                                                      
+     <not counted>      cpu_atom/L1-dcache-loads/                                               (0.00%)
+        86,903,436      cpu_core/L1-dcache-loads/                                             
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           126,990      cpu_core/L1-dcache-load-misses/                                       
+
+       0.089279502 seconds time elapsed
+
+       0.081257000 seconds user
+       0.008025000 seconds sys
+
+
+SIZE=1024 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          31.304        0.60      1.00x
+tile            yes          10.653        1.77      2.94x
+
+ Performance counter stats for './bin/conv tile 1024 1024 3':
+
+     1,260,005,611      cpu_atom/instructions/                                                  (80.69%)
+     2,037,057,282      cpu_core/instructions/                                                  (19.31%)
+       468,876,913      cpu_atom/cycles/                                                        (80.69%)
+       453,597,144      cpu_core/cycles/                                                        (19.31%)
+       329,261,889      cpu_atom/L1-dcache-loads/                                               (80.69%)
+       417,229,677      cpu_core/L1-dcache-loads/                                               (19.31%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           740,600      cpu_core/L1-dcache-load-misses/                                         (19.31%)
+
+       0.493156354 seconds time elapsed
+
+       0.461056000 seconds user
+       0.030936000 seconds sys
+
+
+SIZE=2048 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          58.662        1.29      1.00x
+tile            yes          21.849        3.46      2.68x
+
+ Performance counter stats for './bin/conv tile 2048 2048 3':
+
+     3,814,257,930      cpu_atom/instructions/                                                  (37.91%)
+     6,722,838,208      cpu_core/instructions/                                                  (62.09%)
+     1,305,728,677      cpu_atom/cycles/                                                        (37.91%)
+     1,609,354,270      cpu_core/cycles/                                                        (62.09%)
+       754,818,756      cpu_atom/L1-dcache-loads/                                               (37.91%)
+     1,761,014,213      cpu_core/L1-dcache-loads/                                               (62.09%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         9,943,041      cpu_core/L1-dcache-load-misses/                                         (62.09%)
+
+       1.302396606 seconds time elapsed
+
+       1.184483000 seconds user
+       0.109306000 seconds sys
+
+
+================ TILE=32 ================
+SIZE=256 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           0.714        1.65      1.00x
+tile            yes           0.253        4.67      2.83x
+
+ Performance counter stats for './bin/conv tile 256 256 3':
+
+        11,181,914      cpu_atom/instructions/                                                  (3.70%)
+        93,289,462      cpu_core/instructions/                                                  (96.30%)
+        20,235,374      cpu_atom/cycles/                                                        (3.70%)
+        21,987,427      cpu_core/cycles/                                                        (96.30%)
+         2,663,907      cpu_atom/L1-dcache-loads/                                               (3.70%)
+        22,762,780      cpu_core/L1-dcache-loads/                                               (96.30%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+            46,261      cpu_core/L1-dcache-load-misses/                                         (96.30%)
+
+       0.016695167 seconds time elapsed
+
+       0.014597000 seconds user
+       0.002085000 seconds sys
+
+
+SIZE=512 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           2.681        1.76      1.00x
+tile            yes           0.934        5.05      2.87x
+
+ Performance counter stats for './bin/conv tile 512 512 3':
+
+       202,317,534      cpu_atom/instructions/                                                  (20.60%)
+       389,499,109      cpu_core/instructions/                                                  (79.40%)
+        79,162,584      cpu_atom/cycles/                                                        (20.60%)
+        83,367,489      cpu_core/cycles/                                                        (79.40%)
+        34,932,155      cpu_atom/L1-dcache-loads/                                               (20.60%)
+        98,740,415      cpu_core/L1-dcache-loads/                                               (79.40%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           215,749      cpu_core/L1-dcache-load-misses/                                         (79.40%)
+
+       0.054401360 seconds time elapsed
+
+       0.048215000 seconds user
+       0.005903000 seconds sys
+
+
+SIZE=1024 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          20.551        0.92      1.00x
+tile            yes           3.479        5.43      5.91x
+
+ Performance counter stats for './bin/conv tile 1024 1024 3':
+
+     1,132,329,668      cpu_atom/instructions/                                                  (66.74%)
+     1,921,990,438      cpu_core/instructions/                                                  (33.26%)
+       361,972,499      cpu_atom/cycles/                                                        (66.74%)
+       468,333,985      cpu_core/cycles/                                                        (33.26%)
+       220,959,498      cpu_atom/L1-dcache-loads/                                               (66.74%)
+       579,396,448      cpu_core/L1-dcache-loads/                                               (33.26%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         4,112,676      cpu_core/L1-dcache-load-misses/                                         (33.26%)
+
+       0.296160883 seconds time elapsed
+
+       0.271608000 seconds user
+       0.022966000 seconds sys
+
+
+SIZE=2048 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          38.706        1.95      1.00x
+tile            yes          14.737        5.12      2.63x
+
+ Performance counter stats for './bin/conv tile 2048 2048 3':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+     5,569,453,363      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+     1,232,120,528      cpu_core/cycles/                                                      
+     <not counted>      cpu_atom/L1-dcache-loads/                                               (0.00%)
+     1,357,382,069      cpu_core/L1-dcache-loads/                                             
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         3,969,021      cpu_core/L1-dcache-load-misses/                                       
+
+       0.707446585 seconds time elapsed
+
+       0.653507000 seconds user
+       0.052960000 seconds sys
+
+
+================ TILE=64 ================
+SIZE=256 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           0.666        1.77      1.00x
+tile            yes           0.239        4.94      2.79x
+
+ Performance counter stats for './bin/conv tile 256 256 3':
+
+        11,837,254      cpu_atom/instructions/                                                  (1.46%)
+        91,083,278      cpu_core/instructions/                                                  (98.54%)
+        22,824,932      cpu_atom/cycles/                                                        (1.46%)
+        22,248,050      cpu_core/cycles/                                                        (98.54%)
+         2,823,673      cpu_atom/L1-dcache-loads/                                               (1.46%)
+        22,146,185      cpu_core/L1-dcache-loads/                                               (98.54%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+            57,101      cpu_core/L1-dcache-load-misses/                                         (98.54%)
+
+       0.014917902 seconds time elapsed
+
+       0.012998000 seconds user
+       0.001999000 seconds sys
+
+
+SIZE=512 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           2.632        1.79      1.00x
+tile            yes           1.029        4.59      2.56x
+
+ Performance counter stats for './bin/conv tile 512 512 3':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+       349,749,804      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+        77,943,294      cpu_core/cycles/                                                      
+     <not counted>      cpu_atom/L1-dcache-loads/                                               (0.00%)
+        84,977,271      cpu_core/L1-dcache-loads/                                             
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           253,169      cpu_core/L1-dcache-load-misses/                                       
+
+       0.051110731 seconds time elapsed
+
+       0.044039000 seconds user
+       0.007006000 seconds sys
+
+
+SIZE=1024 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          10.514        1.80      1.00x
+tile            yes           4.036        4.68      2.60x
+
+ Performance counter stats for './bin/conv tile 1024 1024 3':
+
+       494,206,650      cpu_atom/instructions/                                                  (1.85%)
+     1,406,245,335      cpu_core/instructions/                                                  (98.15%)
+       274,292,864      cpu_atom/cycles/                                                        (1.85%)
+       311,273,198      cpu_core/cycles/                                                        (98.15%)
+        75,266,304      cpu_atom/L1-dcache-loads/                                               (1.85%)
+       342,459,649      cpu_core/L1-dcache-loads/                                               (98.15%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           618,403      cpu_core/L1-dcache-load-misses/                                         (98.15%)
+
+       0.194764065 seconds time elapsed
+
+       0.180622000 seconds user
+       0.013970000 seconds sys
+
+
+SIZE=2048 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          33.289        2.27      1.00x
+tile            yes          14.290        5.28      2.33x
+
+ Performance counter stats for './bin/conv tile 2048 2048 3':
+
+     2,760,034,979      cpu_atom/instructions/                                                  (4.30%)
+     5,675,013,188      cpu_core/instructions/                                                  (95.70%)
+     1,181,611,396      cpu_atom/cycles/                                                        (4.30%)
+     1,286,405,997      cpu_core/cycles/                                                        (95.70%)
+       630,144,261      cpu_atom/L1-dcache-loads/                                               (4.30%)
+     1,380,001,231      cpu_core/L1-dcache-loads/                                               (95.70%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         2,732,016      cpu_core/L1-dcache-load-misses/                                         (95.70%)
+
+       0.631827673 seconds time elapsed
+
+       0.582814000 seconds user
+       0.047902000 seconds sys
+
+
+================ TILE=128 ================
+SIZE=256 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           0.765        1.54      1.00x
+tile            yes           0.278        4.24      2.75x
+
+ Performance counter stats for './bin/conv tile 256 256 3':
+
+        48,343,263      cpu_atom/instructions/                                                  (36.06%)
+       113,100,165      cpu_core/instructions/                                                  (63.94%)
+        22,422,167      cpu_atom/cycles/                                                        (36.06%)
+        24,611,098      cpu_core/cycles/                                                        (63.94%)
+         9,224,440      cpu_atom/L1-dcache-loads/                                               (36.06%)
+        28,894,879      cpu_core/L1-dcache-loads/                                               (63.94%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           167,178      cpu_core/L1-dcache-load-misses/                                         (63.94%)
+
+       0.019803886 seconds time elapsed
+
+       0.016050000 seconds user
+       0.003776000 seconds sys
+
+
+SIZE=512 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           2.829        1.67      1.00x
+tile            yes           1.116        4.23      2.53x
+
+ Performance counter stats for './bin/conv tile 512 512 3':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+       349,293,863      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+        77,820,507      cpu_core/cycles/                                                      
+     <not counted>      cpu_atom/L1-dcache-loads/                                               (0.00%)
+        84,709,901      cpu_core/L1-dcache-loads/                                             
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           489,969      cpu_core/L1-dcache-load-misses/                                       
+
+       0.056370872 seconds time elapsed
+
+       0.047165000 seconds user
+       0.009031000 seconds sys
+
+
+SIZE=1024 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          11.604        1.63      1.00x
+tile            yes           4.113        4.59      2.82x
+
+ Performance counter stats for './bin/conv tile 1024 1024 3':
+
+       844,084,391      cpu_atom/instructions/                                                  (4.98%)
+     1,415,416,171      cpu_core/instructions/                                                  (95.02%)
+       300,361,708      cpu_atom/cycles/                                                        (4.98%)
+       307,767,971      cpu_core/cycles/                                                        (95.02%)
+        93,305,024      cpu_atom/L1-dcache-loads/                                               (4.98%)
+       349,072,753      cpu_core/L1-dcache-loads/                                               (95.02%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           519,992      cpu_core/L1-dcache-load-misses/                                         (95.02%)
+
+       0.209181401 seconds time elapsed
+
+       0.194057000 seconds user
+       0.015004000 seconds sys
+
+
+SIZE=2048 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          36.150        2.09      1.00x
+tile            yes          21.539        3.51      1.68x
+
+ Performance counter stats for './bin/conv tile 2048 2048 3':
+
+     5,027,303,955      cpu_atom/instructions/                                                  (0.11%)
+     5,544,523,058      cpu_core/instructions/                                                  (99.89%)
+     1,442,444,542      cpu_atom/cycles/                                                        (0.11%)
+     1,317,781,036      cpu_core/cycles/                                                        (99.89%)
+       995,122,422      cpu_atom/L1-dcache-loads/                                               (0.11%)
+     1,344,173,558      cpu_core/L1-dcache-loads/                                               (99.89%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         4,728,891      cpu_core/L1-dcache-load-misses/                                         (99.89%)
+
+       0.775900994 seconds time elapsed
+
+       0.707788000 seconds user
+       0.066885000 seconds sys
+
+
+================ TILE=256 ================
+SIZE=256 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           0.671        1.76      1.00x
+tile            yes           0.220        5.36      3.05x
+
+ Performance counter stats for './bin/conv tile 256 256 3':
+
+        33,867,804      cpu_atom/instructions/                                                  (23.21%)
+       105,901,947      cpu_core/instructions/                                                  (76.79%)
+        21,604,003      cpu_atom/cycles/                                                        (23.21%)
+        22,932,062      cpu_core/cycles/                                                        (76.79%)
+         6,105,000      cpu_atom/L1-dcache-loads/                                               (23.21%)
+        26,494,552      cpu_core/L1-dcache-loads/                                               (76.79%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+            25,314      cpu_core/L1-dcache-load-misses/                                         (76.79%)
+
+       0.016045546 seconds time elapsed
+
+       0.010413000 seconds user
+       0.005679000 seconds sys
+
+
+SIZE=512 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           2.665        1.77      1.00x
+tile            yes           0.797        5.92      3.34x
+
+ Performance counter stats for './bin/conv tile 512 512 3':
+
+       194,882,984      cpu_atom/instructions/                                                  (17.81%)
+       380,107,265      cpu_core/instructions/                                                  (82.19%)
+        80,030,430      cpu_atom/cycles/                                                        (17.81%)
+        82,451,121      cpu_core/cycles/                                                        (82.19%)
+        32,627,304      cpu_atom/L1-dcache-loads/                                               (17.81%)
+        95,874,890      cpu_core/L1-dcache-loads/                                               (82.19%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+            98,916      cpu_core/L1-dcache-load-misses/                                         (82.19%)
+
+       0.050256336 seconds time elapsed
+
+       0.046349000 seconds user
+       0.003944000 seconds sys
+
+
+SIZE=1024 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          11.477        1.64      1.00x
+tile            yes           4.403        4.29      2.61x
+
+ Performance counter stats for './bin/conv tile 1024 1024 3':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+     1,379,357,977      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+       306,715,397      cpu_core/cycles/                                                      
+     <not counted>      cpu_atom/L1-dcache-loads/                                               (0.00%)
+       336,015,893      cpu_core/L1-dcache-loads/                                             
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           774,413      cpu_core/L1-dcache-load-misses/                                       
+
+       0.204615964 seconds time elapsed
+
+       0.188445000 seconds user
+       0.016037000 seconds sys
+
+
+SIZE=2048 K=3
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          34.857        2.17      1.00x
+tile            yes          14.827        5.09      2.35x
+
+ Performance counter stats for './bin/conv tile 2048 2048 3':
+
+     3,150,515,616      cpu_atom/instructions/                                                  (4.58%)
+     5,620,087,517      cpu_core/instructions/                                                  (95.42%)
+       964,475,863      cpu_atom/cycles/                                                        (4.58%)
+     1,253,462,279      cpu_core/cycles/                                                        (95.42%)
+       322,178,613      cpu_atom/L1-dcache-loads/                                               (4.58%)
+     1,390,257,897      cpu_core/L1-dcache-loads/                                               (95.42%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         1,790,088      cpu_core/L1-dcache-load-misses/                                         (95.42%)
+
+       0.731716425 seconds time elapsed
+
+       0.677597000 seconds user
+       0.049896000 seconds sys
+
+

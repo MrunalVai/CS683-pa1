@@ -1,0 +1,250 @@
+================ NAIVE SIZE=256 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           0.718        1.64      1.00x
+
+ Performance counter stats for './bin/conv naive 256 256 3':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+        74,329,602      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+        17,354,486      cpu_core/cycles/                                                      
+     <not counted>      cpu_atom/L1-dcache-loads/                                               (0.00%)
+        14,748,784      cpu_core/L1-dcache-loads/                                             
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+            36,898      cpu_core/L1-dcache-load-misses/                                       
+
+       0.013688291 seconds time elapsed
+
+       0.009117000 seconds user
+       0.004558000 seconds sys
+
+
+================ NAIVE SIZE=512 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           5.050        0.93      1.00x
+
+ Performance counter stats for './bin/conv naive 512 512 3':
+
+       287,507,869      cpu_atom/instructions/                                                
+     <not counted>      cpu_core/instructions/                                                  (0.00%)
+        90,671,513      cpu_atom/cycles/                                                      
+     <not counted>      cpu_core/cycles/                                                        (0.00%)
+        56,589,171      cpu_atom/L1-dcache-loads/                                             
+     <not counted>      cpu_core/L1-dcache-loads/                                               (0.00%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+     <not counted>      cpu_core/L1-dcache-load-misses/                                         (0.00%)
+
+       0.071280668 seconds time elapsed
+
+       0.064370000 seconds user
+       0.007040000 seconds sys
+
+
+================ NAIVE SIZE=1024 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          12.305        1.53      1.00x
+
+ Performance counter stats for './bin/conv naive 1024 1024 3':
+
+       542,227,776      cpu_atom/instructions/                                                  (20.07%)
+     1,289,294,836      cpu_core/instructions/                                                  (79.93%)
+       225,180,139      cpu_atom/cycles/                                                        (20.07%)
+       262,605,638      cpu_core/cycles/                                                        (79.93%)
+       104,909,403      cpu_atom/L1-dcache-loads/                                               (20.07%)
+       253,367,838      cpu_core/L1-dcache-loads/                                               (79.93%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           243,634      cpu_core/L1-dcache-load-misses/                                         (79.93%)
+
+       0.191172041 seconds time elapsed
+
+       0.168929000 seconds user
+       0.022121000 seconds sys
+
+
+================ NAIVE SIZE=2048 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          54.187        1.39      1.00x
+
+ Performance counter stats for './bin/conv naive 2048 2048 3':
+
+     2,833,206,934      cpu_atom/instructions/                                                  (19.13%)
+     4,955,546,726      cpu_core/instructions/                                                  (80.87%)
+       835,925,226      cpu_atom/cycles/                                                        (19.13%)
+     1,025,785,469      cpu_core/cycles/                                                        (80.87%)
+       539,547,028      cpu_atom/L1-dcache-loads/                                               (19.13%)
+       975,352,464      cpu_core/L1-dcache-loads/                                               (80.87%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         1,603,465      cpu_core/L1-dcache-load-misses/                                         (80.87%)
+
+       0.741661241 seconds time elapsed
+
+       0.678005000 seconds user
+       0.060910000 seconds sys
+
+
+================ NAIVE SIZE=4096 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=4096 W=4096 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         148.584        2.03      1.00x
+
+ Performance counter stats for './bin/conv naive 4096 4096 3':
+
+     8,859,649,573      cpu_atom/instructions/                                                  (0.47%)
+    18,236,317,354      cpu_core/instructions/                                                  (99.53%)
+     3,207,016,978      cpu_atom/cycles/                                                        (0.47%)
+     3,667,505,764      cpu_core/cycles/                                                        (99.53%)
+       980,908,414      cpu_atom/L1-dcache-loads/                                               (0.47%)
+     3,577,666,744      cpu_core/L1-dcache-loads/                                               (99.53%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         5,657,116      cpu_core/L1-dcache-load-misses/                                         (99.53%)
+
+       2.193700580 seconds time elapsed
+
+       1.979836000 seconds user
+       0.213874000 seconds sys
+
+
+================ NAIVE SIZE=256 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           2.393        1.37      1.00x
+
+ Performance counter stats for './bin/conv naive 256 256 5':
+
+       141,252,836      cpu_atom/instructions/                                                  (66.90%)
+       187,946,674      cpu_core/instructions/                                                  (33.10%)
+        48,343,359      cpu_atom/cycles/                                                        (66.90%)
+        49,099,679      cpu_core/cycles/                                                        (33.10%)
+        33,951,096      cpu_atom/L1-dcache-loads/                                               (66.90%)
+        45,844,851      cpu_core/L1-dcache-loads/                                               (33.10%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+            72,594      cpu_core/L1-dcache-load-misses/                                         (33.10%)
+
+       0.035736891 seconds time elapsed
+
+       0.031828000 seconds user
+       0.002893000 seconds sys
+
+
+================ NAIVE SIZE=512 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           6.448        2.03      1.00x
+
+ Performance counter stats for './bin/conv naive 512 512 5':
+
+       378,305,887      cpu_atom/instructions/                                                  (25.29%)
+       697,078,064      cpu_core/instructions/                                                  (74.71%)
+       133,171,883      cpu_atom/cycles/                                                        (25.29%)
+       151,909,464      cpu_core/cycles/                                                        (74.71%)
+        84,526,842      cpu_atom/L1-dcache-loads/                                               (25.29%)
+       170,690,675      cpu_core/L1-dcache-loads/                                               (74.71%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           287,796      cpu_core/L1-dcache-load-misses/                                         (74.71%)
+
+       0.090157339 seconds time elapsed
+
+       0.083184000 seconds user
+       0.007015000 seconds sys
+
+
+================ NAIVE SIZE=1024 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          26.063        2.01      1.00x
+
+ Performance counter stats for './bin/conv naive 1024 1024 5':
+
+     1,241,911,263      cpu_atom/instructions/                                                  (3.42%)
+     2,498,326,769      cpu_core/instructions/                                                  (96.58%)
+       434,244,386      cpu_atom/cycles/                                                        (3.42%)
+       549,404,075      cpu_core/cycles/                                                        (96.58%)
+       136,715,343      cpu_atom/L1-dcache-loads/                                               (3.42%)
+       609,076,997      cpu_core/L1-dcache-loads/                                               (96.58%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           837,800      cpu_core/L1-dcache-load-misses/                                         (96.58%)
+
+       0.332859076 seconds time elapsed
+
+       0.317021000 seconds user
+       0.015950000 seconds sys
+
+
+================ NAIVE SIZE=2048 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         116.288        1.80      1.00x
+
+ Performance counter stats for './bin/conv naive 2048 2048 5':
+
+     5,421,272,473      cpu_atom/instructions/                                                  (20.24%)
+    10,930,902,276      cpu_core/instructions/                                                  (79.76%)
+     1,762,135,417      cpu_atom/cycles/                                                        (20.24%)
+     2,452,706,673      cpu_core/cycles/                                                        (79.76%)
+     1,241,818,264      cpu_atom/L1-dcache-loads/                                               (20.24%)
+     2,656,160,907      cpu_core/L1-dcache-loads/                                               (79.76%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         3,017,266      cpu_core/L1-dcache-load-misses/                                         (79.76%)
+
+       1.538273767 seconds time elapsed
+
+       1.462663000 seconds user
+       0.067660000 seconds sys
+
+
+================ NAIVE SIZE=4096 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=4096 W=4096 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         475.245        1.77      1.00x
+
+ Performance counter stats for './bin/conv naive 4096 4096 5':
+
+    24,062,759,523      cpu_atom/instructions/                                                  (1.25%)
+    39,448,095,022      cpu_core/instructions/                                                  (98.75%)
+     8,070,368,265      cpu_atom/cycles/                                                        (1.25%)
+     8,749,263,553      cpu_core/cycles/                                                        (98.75%)
+     4,750,735,265      cpu_atom/L1-dcache-loads/                                               (1.25%)
+     9,536,673,243      cpu_core/L1-dcache-loads/                                               (98.75%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         5,760,145      cpu_core/L1-dcache-load-misses/                                         (98.75%)
+
+       5.259307599 seconds time elapsed
+
+       5.085695000 seconds user
+       0.172989000 seconds sys
+
+

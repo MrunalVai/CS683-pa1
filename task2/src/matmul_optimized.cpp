@@ -1,13 +1,6 @@
 #include <immintrin.h>
 #include "matmul.h"
 
-<<<<<<< HEAD
-void matmul_optimized(const float* A, const float* B, float* C,
-                      int M, int N, int K, int lda, int ldb, int ldc) {
-    // TODO(student): replace this placeholder with your best combined implementation.
-    matmul_naive(A, B, C, M, N, K, lda, ldb, ldc);
-}
-=======
 static inline float hsum256_opt(__m256 v){
     __m128 lo=_mm256_castps256_ps128(v);
     __m128 hi=_mm256_extractf128_ps(v,1);
@@ -101,4 +94,3 @@ void matmul_optimized(const float* A,const float* B,float* C,int M,int N,int K,i
         }
     }
 }
->>>>>>> 29a4bf3 (Add Task2 Optimized Matmul)

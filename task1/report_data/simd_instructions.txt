@@ -1,0 +1,344 @@
+================ NAIVE SIZE=256 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           1.562        0.76      1.00x
+
+ Performance counter stats for './bin/conv naive 256 256 3':
+
+        74,679,056      cpu_atom/instructions/                                                
+     <not counted>      cpu_core/instructions/                                                  (0.00%)
+        30,920,720      cpu_atom/cycles/                                                      
+     <not counted>      cpu_core/cycles/                                                        (0.00%)
+
+       0.031543067 seconds time elapsed
+
+       0.024154000 seconds user
+       0.006763000 seconds sys
+
+
+================ SIMD SIZE=256 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           0.715        1.65      1.00x
+simd            yes           0.092       12.79      7.75x
+
+ Performance counter stats for './bin/conv simd 256 256 3':
+
+        70,894,272      cpu_atom/instructions/                                                  (70.03%)
+       106,119,401      cpu_core/instructions/                                                  (29.97%)
+        25,437,273      cpu_atom/cycles/                                                        (70.03%)
+        22,995,109      cpu_core/cycles/                                                        (29.97%)
+
+       0.016926448 seconds time elapsed
+
+       0.012490000 seconds user
+       0.004163000 seconds sys
+
+
+================ NAIVE SIZE=512 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           2.741        1.72      1.00x
+
+ Performance counter stats for './bin/conv naive 512 512 3':
+
+       198,380,675      cpu_atom/instructions/                                                  (52.69%)
+       386,198,315      cpu_core/instructions/                                                  (47.31%)
+        72,416,873      cpu_atom/cycles/                                                        (52.69%)
+        72,432,581      cpu_core/cycles/                                                        (47.31%)
+
+       0.047739418 seconds time elapsed
+
+       0.045481000 seconds user
+       0.002021000 seconds sys
+
+
+================ SIMD SIZE=512 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           2.801        1.68      1.00x
+simd            yes           0.321       14.71      8.73x
+
+ Performance counter stats for './bin/conv simd 512 512 3':
+
+       132,407,324      cpu_atom/instructions/                                                  (21.81%)
+       366,482,488      cpu_core/instructions/                                                  (78.19%)
+        69,595,036      cpu_atom/cycles/                                                        (21.81%)
+        74,163,556      cpu_core/cycles/                                                        (78.19%)
+
+       0.050518240 seconds time elapsed
+
+       0.040505000 seconds user
+       0.009879000 seconds sys
+
+
+================ NAIVE SIZE=1024 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          26.056        0.72      1.00x
+
+ Performance counter stats for './bin/conv naive 1024 1024 3':
+
+       739,428,140      cpu_atom/instructions/                                                  (47.84%)
+     1,508,452,596      cpu_core/instructions/                                                  (52.16%)
+       225,224,717      cpu_atom/cycles/                                                        (47.84%)
+       318,950,543      cpu_core/cycles/                                                        (52.16%)
+
+       0.252343708 seconds time elapsed
+
+       0.229974000 seconds user
+       0.018997000 seconds sys
+
+
+================ SIMD SIZE=1024 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          12.211        1.55      1.00x
+simd            yes           1.679       11.24      7.27x
+
+ Performance counter stats for './bin/conv simd 1024 1024 3':
+
+       798,106,283      cpu_atom/instructions/                                                  (41.32%)
+     1,571,577,929      cpu_core/instructions/                                                  (58.68%)
+       265,650,778      cpu_atom/cycles/                                                        (41.32%)
+       334,141,317      cpu_core/cycles/                                                        (58.68%)
+
+       0.226208264 seconds time elapsed
+
+       0.208065000 seconds user
+       0.018005000 seconds sys
+
+
+================ NAIVE SIZE=2048 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          40.376        1.87      1.00x
+
+ Performance counter stats for './bin/conv naive 2048 2048 3':
+
+     2,444,405,998      cpu_atom/instructions/                                                  (25.81%)
+     5,282,979,216      cpu_core/instructions/                                                  (74.19%)
+       861,490,138      cpu_atom/cycles/                                                        (25.81%)
+     1,061,186,369      cpu_core/cycles/                                                        (74.19%)
+
+       0.884567779 seconds time elapsed
+
+       0.799809000 seconds user
+       0.082773000 seconds sys
+
+
+================ SIMD SIZE=2048 K=3 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=3 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          48.930        1.54      1.00x
+simd            yes           5.779       13.06      8.47x
+
+ Performance counter stats for './bin/conv simd 2048 2048 3':
+
+     1,811,433,763      cpu_atom/instructions/                                                  (0.51%)
+     5,015,304,251      cpu_core/instructions/                                                  (99.49%)
+       923,849,638      cpu_atom/cycles/                                                        (0.51%)
+     1,055,152,211      cpu_core/cycles/                                                        (99.49%)
+
+       0.775695616 seconds time elapsed
+
+       0.706493000 seconds user
+       0.068950000 seconds sys
+
+
+================ NAIVE SIZE=256 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           1.596        2.05      1.00x
+
+ Performance counter stats for './bin/conv naive 256 256 5':
+
+        76,762,864      cpu_atom/instructions/                                                  (19.75%)
+       176,246,273      cpu_core/instructions/                                                  (80.25%)
+        37,755,721      cpu_atom/cycles/                                                        (19.75%)
+        38,985,590      cpu_core/cycles/                                                        (80.25%)
+
+       0.024829104 seconds time elapsed
+
+       0.019186000 seconds user
+       0.005756000 seconds sys
+
+
+================ SIMD SIZE=256 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=256 W=256 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           2.556        1.28      1.00x
+simd            yes           0.317       10.32      8.05x
+
+ Performance counter stats for './bin/conv simd 256 256 5':
+
+       164,840,047      cpu_atom/instructions/                                                  (65.62%)
+       184,624,984      cpu_core/instructions/                                                  (34.38%)
+        56,906,429      cpu_atom/cycles/                                                        (65.62%)
+        49,594,194      cpu_core/cycles/                                                        (34.38%)
+
+       0.037527297 seconds time elapsed
+
+       0.035400000 seconds user
+       0.002022000 seconds sys
+
+
+================ NAIVE SIZE=512 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           7.870        1.67      1.00x
+
+ Performance counter stats for './bin/conv naive 512 512 5':
+
+       349,057,733      cpu_atom/instructions/                                                  (18.90%)
+       678,989,709      cpu_core/instructions/                                                  (81.10%)
+       138,648,625      cpu_atom/cycles/                                                        (18.90%)
+       155,919,049      cpu_core/cycles/                                                        (81.10%)
+
+       0.113565780 seconds time elapsed
+
+       0.105524000 seconds user
+       0.007964000 seconds sys
+
+
+================ SIMD SIZE=512 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=512 W=512 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           7.735        1.69      1.00x
+simd            yes           1.072       12.23      7.22x
+
+ Performance counter stats for './bin/conv simd 512 512 5':
+
+        88,470,563      cpu_atom/instructions/                                                  (1.49%)
+       685,087,674      cpu_core/instructions/                                                  (98.51%)
+       125,878,339      cpu_atom/cycles/                                                        (1.49%)
+       158,524,796      cpu_core/cycles/                                                        (98.51%)
+
+       0.117894044 seconds time elapsed
+
+       0.110016000 seconds user
+       0.008001000 seconds sys
+
+
+================ NAIVE SIZE=1024 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          27.504        1.91      1.00x
+
+ Performance counter stats for './bin/conv naive 1024 1024 5':
+
+       470,378,637      cpu_atom/instructions/                                                  (0.80%)
+     2,471,821,964      cpu_core/instructions/                                                  (99.20%)
+       441,247,150      cpu_atom/cycles/                                                        (0.80%)
+       552,444,850      cpu_core/cycles/                                                        (99.20%)
+
+       0.355849918 seconds time elapsed
+
+       0.340909000 seconds user
+       0.014996000 seconds sys
+
+
+================ SIMD SIZE=1024 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=1024 W=1024 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          28.797        1.82      1.00x
+simd            yes           4.826       10.86      5.97x
+
+ Performance counter stats for './bin/conv simd 1024 1024 5':
+
+     1,444,354,047      cpu_atom/instructions/                                                  (6.68%)
+     2,783,329,127      cpu_core/instructions/                                                  (93.32%)
+       560,120,925      cpu_atom/cycles/                                                        (6.68%)
+       645,233,578      cpu_core/cycles/                                                        (93.32%)
+
+       0.404435914 seconds time elapsed
+
+       0.390302000 seconds user
+       0.013975000 seconds sys
+
+
+================ NAIVE SIZE=2048 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         140.286        1.49      1.00x
+
+ Performance counter stats for './bin/conv naive 2048 2048 5':
+
+     1,409,670,370      cpu_atom/instructions/                                                  (0.21%)
+     9,836,542,865      cpu_core/instructions/                                                  (99.79%)
+     2,034,315,238      cpu_atom/cycles/                                                        (0.21%)
+     2,195,350,402      cpu_core/cycles/                                                        (99.79%)
+
+       1.694050610 seconds time elapsed
+
+       1.628830000 seconds user
+       0.061993000 seconds sys
+
+
+================ SIMD SIZE=2048 K=5 ================
+CS683 PA-1 Task 1  2D convolution optimization harness
+
+=== Workload  H=2048 W=2048 K=5 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         104.398        2.01      1.00x
+simd            yes          16.511       12.70      6.32x
+
+ Performance counter stats for './bin/conv simd 2048 2048 5':
+
+     5,657,353,670      cpu_atom/instructions/                                                  (14.06%)
+    11,606,814,303      cpu_core/instructions/                                                  (85.94%)
+     2,105,645,580      cpu_atom/cycles/                                                        (14.06%)
+     2,719,015,439      cpu_core/cycles/                                                        (85.94%)
+
+       1.577716131 seconds time elapsed
+
+       1.528184000 seconds user
+       0.047974000 seconds sys
+
+

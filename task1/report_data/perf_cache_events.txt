@@ -1,0 +1,446 @@
+cache:
+       [Counts the total number of L2 Cache accesses. Counts on a per core
+       [Counts the number of L2 Cache accesses that resulted in a hit. Counts
+       [Counts the number of L2 Cache accesses that resulted in a miss. Counts
+  longest_lat_cache.miss
+       [Counts the number of cacheable memory requests that miss in the LLC.
+  longest_lat_cache.reference
+       [Counts the number of cacheable memory requests that access the LLC.
+        cache or TLB miss which hit in the L2,LLC,DRAM or MMIO (Non-DRAM).
+        cache or TLB miss which hit in DRAM or MMIO (Non-DRAM). Unit: cpu_atom]
+        cache or TLB miss which hit in the L2 cache. Unit: cpu_atom]
+        cache or TLB miss which hit in the LLC or other core with HITE/F/M.
+        which hit in the L2 cache. Unit: cpu_atom]
+       [Counts the number of load uops retired that hit in the L3 cache,in
+       [Counts the number of load uops retired that hit in the L1 data cache
+       [Counts the number of load uops retired that miss in the L1 data cache
+       [Counts the number of load uops retired that hit in the L2 cache
+       [Counts the number of load uops retired that miss in the L2 cache
+       [Counts the number of load uops retired that hit in the L3 cache
+       [Counts the number of load uops retired that hit in the L3 cache,in
+       [Counts the number of load uops retired that miss in the L3 cache
+       [Counts modified writebacks from L1 cache and L2 cache that have any
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+        that were supplied by the L3 cache. Unit: cpu_atom]
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+        that were supplied by the L3 cache where a snoop was sent,the snoop
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+        that were supplied by the L3 cache where a snoop was sent,the snoop
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+        that were supplied by the L3 cache where a snoop was sent,the snoop
+       [Counts demand data reads that were supplied by the L3 cache. Unit:
+       [Counts demand data reads that were supplied by the L3 cache where a
+       [Counts demand data reads that were supplied by the L3 cache where a
+       [Counts demand data reads that were supplied by the L3 cache where a
+        exclusive ownership (PREFETCHW) that were supplied by the L3 cache.
+        exclusive ownership (PREFETCHW) that were supplied by the L3 cache
+        exclusive ownership (PREFETCHW) that were supplied by the L3 cache
+        exclusive ownership (PREFETCHW) that were supplied by the L3 cache
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that were supplied by the L3 cache. Unit:
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that were supplied by the L3 cache where a
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that were supplied by the L3 cache where a
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that were supplied by the L3 cache where a
+  topdown_fe_bound.icache
+        by the frontend due to instruction cache misses. Unit: cpu_atom]
+       [Counts the number of cache lines replaced in L1 data cache. Unit:
+       [L2 cache lines filling L2. Unit: cpu_core]
+       [Modified cache lines that are evicted by L2 cache when triggered by an
+        L2 cache fill. Unit: cpu_core]
+       [Non-modified cache lines that are silently dropped by L2 cache. Unit:
+       [Cache lines that have been L2 hardware prefetched but not used by
+       [All accesses to L2 cache [This event is alias to L2_RQSTS.REFERENCES].
+       [Read requests with true-miss in L2 cache. [This event is alias to
+       [Demand Data Read access L2 cache. Unit: cpu_core]
+       [Demand requests that miss L2 cache. Unit: cpu_core]
+       [RFO requests to L2 cache. Unit: cpu_core]
+       [L2 cache hits when fetching instructions,code reads. Unit: cpu_core]
+       [L2 cache misses when fetching instructions. Unit: cpu_core]
+       [Demand Data Read requests that hit L2 cache. Unit: cpu_core]
+       [Demand Data Read miss L2 cache. Unit: cpu_core]
+       [Read requests with true-miss in L2 cache. [This event is alias to
+       [All accesses to L2 cache [This event is alias to L2_REQUEST.ALL].
+       [RFO requests that hit L2 cache. Unit: cpu_core]
+       [RFO requests that miss L2 cache. Unit: cpu_core]
+       [SW prefetch requests that hit L2 cache. Unit: cpu_core]
+       [SW prefetch requests that miss L2 cache. Unit: cpu_core]
+       [L2 writebacks that access L2 cache. Unit: cpu_core]
+  longest_lat_cache.miss
+       [Core-originated cacheable requests that missed L3 (Except hardware
+  longest_lat_cache.reference
+       [Core-originated cacheable requests that refer to L3 (Except hardware
+       [Retired load instructions that split across a cacheline boundary
+       [Retired store instructions that split across a cacheline boundary
+       [Completed demand load uops that miss the L1 d-cache. Unit: cpu_core]
+        snoop hits in on-pkg core cache Supports address when precise. Unit:
+        cross-core snoop missed in on-pkg core cache Supports address when
+        snoop hits in on-pkg core cache Supports address when precise. Unit:
+       [Retired instructions with at least 1 uncacheable load or lock Supports
+        the FB(fill buffer),because a preceding miss to the same cacheline
+       [Retired load instructions with L1 cache hits as data sources Supports
+       [Retired load instructions missed L1 cache as data sources Supports
+       [Retired load instructions with L2 cache hits as data sources Supports
+       [Retired load instructions missed L2 cache as data sources Supports
+       [Retired load instructions with L3 cache hits as data sources Supports
+       [Retired load instructions missed L3 cache as data sources Supports
+       [Counts writebacks of modified cachelines that hit in the L3 or were
+        snooped from another core's caches. Unit: cpu_core]
+       [Counts writebacks of non-modified cachelines that hit in the L3 or
+        were snooped from another core's caches. Unit: cpu_core]
+        caches which forwarded the unmodified data to the requesting core.
+        caches,data forwarding is required as the data is modified. Unit:
+        snoop hit in another cores caches,data forwarding is required as the
+        and prefetches to the core caches (L1 or L2) that hit in the L3 or
+        were snooped from another core's caches. Unit: cpu_core]
+       [Cacheable and noncacheable code read requests. Unit: cpu_core]
+       [Counts bus locks,accounts for cache line split locks and UC locks.
+  icache.accesses
+       [Counts the number of requests to the instruction cache for one or more
+        bytes of a cache line. Unit: cpu_atom]
+  icache.misses
+       [Counts the number of instruction cache misses. Unit: cpu_atom]
+       [Retired Instructions who experienced Instruction L1 Cache true miss.
+       [Retired Instructions who experienced Instruction L2 Cache true miss.
+  icache_data.stall_periods
+       [ICACHE_DATA.STALL_PERIODS. Unit: cpu_core]
+  icache_data.stalls
+       [Cycles where a code fetch is stalled due to L1 instruction cache miss.
+  icache_tag.stalls
+       [Cycles where a code fetch is stalled due to L1 instruction cache tag
+legacy cache:
+  l1-dcache-loads
+       [Level 1 data cache read accesses. Unit: cpu_atom]
+  l1-dcache-stores
+       [Level 1 data cache write accesses. Unit: cpu_atom]
+  l1-icache-load-misses
+       [Level 1 instruction cache read misses. Unit: cpu_atom]
+  l1-icache-loads
+       [Level 1 instruction cache read accesses. Unit: cpu_atom]
+       [Last level cache read misses. Unit: cpu_atom]
+       [Last level cache read accesses. Unit: cpu_atom]
+       [Last level cache write misses. Unit: cpu_atom]
+       [Last level cache write accesses. Unit: cpu_atom]
+  l1-dcache-load-misses
+       [Level 1 data cache read misses. Unit: cpu_core]
+  l1-dcache-loads
+       [Level 1 data cache read accesses. Unit: cpu_core]
+  l1-dcache-stores
+       [Level 1 data cache write accesses. Unit: cpu_core]
+  l1-icache-load-misses
+       [Level 1 instruction cache read misses. Unit: cpu_core]
+       [Last level cache read misses. Unit: cpu_core]
+       [Last level cache read accesses. Unit: cpu_core]
+       [Last level cache write misses. Unit: cpu_core]
+       [Last level cache write accesses. Unit: cpu_core]
+  cache-misses
+       [Cache misses. Usually this indicates Last Level Cache misses; this is
+        PERF_COUNT_HW_CACHE_REFERENCES event to calculate cache miss rates.
+  cache-references
+       [Cache accesses. Usually this indicates Last Level Cache accesses but
+  cache-misses
+       [Cache misses. Usually this indicates Last Level Cache misses; this is
+        PERF_COUNT_HW_CACHE_REFERENCES event to calculate cache miss rates.
+  cache-references
+       [Cache accesses. Usually this indicates Last Level Cache accesses but
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+        that were not supplied by the L3 cache. Unit: cpu_atom]
+       [Counts demand data reads that were not supplied by the L3 cache. Unit:
+       [Counts demand data reads that were not supplied by the L3 cache.
+        cache. Unit: cpu_atom]
+        cache. [L3_MISS_LOCAL is alias to L3_MISS]. Unit: cpu_atom]
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that were not supplied by the L3 cache. Unit:
+       [Execution stalls while L3 cache miss demand load is outstanding. Unit:
+       [Cycles while L1 cache miss demand load is outstanding. Unit: cpu_core]
+       [Execution stalls while L1 cache miss demand load is outstanding. Unit:
+       [Execution stalls while L2 cache miss demand cacheable load request is
+       [Execution stalls while L3 cache miss demand cacheable load request is
+       [Counts demand data reads that were not supplied by the L3 cache. Unit:
+        by the L3 cache. Unit: cpu_core]
+       [Counts demand data read requests that miss the L3 cache. Unit:
+        pending that are known to have missed the L3 cache. Unit: cpu_core]
+       [Counts streaming stores which modify a full 64 byte cacheline that
+       [Counts streaming stores which modify only part of a 64 byte cacheline
+        BTCLEARs,ITLB misses,and ICache misses. Unit: cpu_atom]
+       [Cycles while L1 cache miss demand load is outstanding. Unit: cpu_core]
+       [Cycles while L2 cache miss demand load is outstanding. Unit: cpu_core]
+       [Execution stalls while L1 cache miss demand load is outstanding. Unit:
+       [Execution stalls while L2 cache miss demand load is outstanding. Unit:
+        incrementing this counter. However,same cache line write requests
+  itlb_misses.pde_cache_miss
+        the PDE (Page Directory Entry) cache. Unit: cpu_atom]
+       [L2 cache true misses per kilo instruction for retired demand loads]
+        code footprint programs (i-side cache; TLB and BTB misses)]
+  tma_icache_misses
+        instruction cache misses]
+        code footprint programs (i-side cache; TLB and BTB misses)]
+  tma_icache_misses
+        instruction cache misses]
+  tma_bottleneck_data_cache_memory_bandwidth
+       [Total pipeline cost of external Memory- or Cache-Bandwidth related
+  tma_bottleneck_data_cache_memory_latency
+       [Total pipeline cost of external Memory- or Cache-Latency related
+        demand load accesses that hit the L1D cache]
+       [This metric estimates how often the CPU was stalled due to L2 cache
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+CacheHits: [Grouping from Top-down Microarchitecture Analysis Metrics spreadsheet]
+       [L1 cache true misses per kilo instruction for retired demand loads]
+       [L1 cache true misses per kilo instruction for all demand loads
+       [L2 cache hits per kilo instruction for all request types (including
+       [L2 cache hits per kilo instruction for all demand loads (including
+       [L2 cache true misses per kilo instruction for retired demand loads]
+       [L2 cache ([RKL+] true) misses per kilo instruction for all request
+       [L2 cache ([RKL+] true) misses per kilo instruction for all demand
+        missing the L1 Data (L1D) cache]
+       [This metric estimates how often the CPU was stalled due to L2 cache
+        accesses to L3 cache or contended with a sibling Core]
+CacheMisses: [Grouping from Top-down Microarchitecture Analysis Metrics spreadsheet]
+       [Offcore requests (L2 cache miss) per kilo instruction for demand RFOs]
+       [Mem;Backend;CacheHits]
+        limited due to DSB (decoded uop cache) fetch pipeline]
+       [Total pipeline cost of DSB (uop cache) hits - subset of the
+       [Fraction of Uops delivered by the DSB (aka Decoded ICache; or Uop
+        Cache)]
+       [Total pipeline cost of DSB (uop cache) misses - subset of the
+        code footprint programs (i-side cache; TLB and BTB misses)]
+       [Total pipeline cost of DSB (uop cache) hits - subset of the
+       [Total pipeline cost of DSB (uop cache) misses - subset of the
+       [Total pipeline cost of Instruction Cache misses - subset of the
+       [Fraction of Uops delivered by the DSB (aka Decoded ICache; or Uop
+        Cache)]
+  tma_info_frontend_icache_miss_latency
+       [Average Latency for L1 instruction cache misses]
+        Cache)]
+        limited due to DSB (decoded uop cache) fetch pipeline]
+       [Total pipeline cost of DSB (uop cache) hits - subset of the
+       [Fraction of Uops delivered by the DSB (aka Decoded ICache; or Uop
+        Cache)]
+        instruction cache misses that hit in the L2 cache]
+        instruction cache misses that miss in the L2 cache]
+        structures to cache translation of 2 or 4 MB pages for (instruction)
+        structures to cache translation of 4 KB pages for (instruction) code
+  tma_icache_misses
+        instruction cache misses]
+       [Total pipeline cost of Instruction Cache misses - subset of the
+  tma_info_frontend_icache_miss_latency
+       [Average Latency for L1 instruction cache misses]
+        code footprint programs (i-side cache; TLB and BTB misses)]
+        code footprint programs (i-side cache; TLB and BTB misses)]
+        instruction cache misses that hit in the L2 cache]
+        instruction cache misses that miss in the L2 cache]
+  tma_icache_misses
+        instruction cache misses]
+       [Total pipeline cost of Instruction Cache misses - subset of the
+  tma_info_frontend_icache_miss_latency
+       [Average Latency for L1 instruction cache misses]
+       [L2 cache true code cacheline misses per kilo instruction]
+       [L2 cache speculative code cacheline misses per kilo instruction]
+        Frontend Cluster due to an Ifetch Miss,either Icache or ITLB Miss]
+        Cache)]
+       [Average Latency for L2 cache miss demand Loads]
+       [This metric represents fraction of cycles the CPU spent handling cache
+  tma_bottleneck_data_cache_memory_bandwidth
+       [Total pipeline cost of external Memory- or Cache-Bandwidth related
+  tma_bottleneck_data_cache_memory_latency
+       [Total pipeline cost of external Memory- or Cache-Latency related
+  tma_info_memory_core_l1d_cache_fill_bw_2t
+       [Average per-core data fill bandwidth to the L1 data cache [GB / sec]]
+  tma_info_memory_core_l2_cache_fill_bw_2t
+       [Average per-core data fill bandwidth to the L2 cache [GB / sec]]
+  tma_info_memory_core_l3_cache_access_bw_2t
+       [Average per-core data access bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_core_l3_cache_fill_bw_2t
+       [Average per-core data fill bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_l1d_cache_fill_bw
+       [Average per-thread data fill bandwidth to the L1 data cache [GB / sec]]
+       [L1 cache true misses per kilo instruction for retired demand loads]
+       [L1 cache true misses per kilo instruction for all demand loads
+  tma_info_memory_l2_cache_fill_bw
+       [Average per-thread data fill bandwidth to the L2 cache [GB / sec]]
+       [L2 cache hits per kilo instruction for all request types (including
+       [L2 cache hits per kilo instruction for all demand loads (including
+       [L2 cache true misses per kilo instruction for retired demand loads]
+       [L2 cache ([RKL+] true) misses per kilo instruction for all request
+       [L2 cache ([RKL+] true) misses per kilo instruction for all demand
+  tma_info_memory_l3_cache_access_bw
+       [Average per-thread data access bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_l3_cache_fill_bw
+       [Average per-thread data fill bandwidth to the L3 cache [GB / sec]]
+       [L3 cache true misses per kilo instruction for retired demand loads]
+       [Actual Average Latency for L1 data-cache miss demand load operations
+       [Un-cacheable retired load per kilo instruction]
+  tma_bottleneck_data_cache_memory_bandwidth
+       [Total pipeline cost of external Memory- or Cache-Bandwidth related
+  tma_info_memory_core_l1d_cache_fill_bw_2t
+       [Average per-core data fill bandwidth to the L1 data cache [GB / sec]]
+  tma_info_memory_core_l2_cache_fill_bw_2t
+       [Average per-core data fill bandwidth to the L2 cache [GB / sec]]
+  tma_info_memory_core_l3_cache_access_bw_2t
+       [Average per-core data access bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_core_l3_cache_fill_bw_2t
+       [Average per-core data fill bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_l1d_cache_fill_bw
+       [Average per-thread data fill bandwidth to the L1 data cache [GB / sec]]
+  tma_info_memory_l2_cache_fill_bw
+       [Average per-thread data fill bandwidth to the L2 cache [GB / sec]]
+  tma_info_memory_l3_cache_access_bw
+       [Average per-thread data access bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_l3_cache_fill_bw
+       [Average per-thread data fill bandwidth to the L3 cache [GB / sec]]
+       [Actual Average Latency for L1 data-cache miss demand load operations
+        missing the L1 Data (L1D) cache]
+       [This metric estimates how often the CPU was stalled due to L2 cache
+        accesses to L3 cache or contended with a sibling Core]
+  tma_bottleneck_data_cache_memory_latency
+       [Total pipeline cost of external Memory- or Cache-Latency related
+       [Actual Average Latency for L1 data-cache miss demand load operations
+        demand load accesses that hit the L1D cache]
+        that hit the L2 cache under unloaded scenarios (possibly L2 latency
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+        code footprint programs (i-side cache; TLB and BTB misses)]
+        structures to cache translation of 2 or 4 MB pages for (instruction)
+        structures to cache translation of 4 KB pages for (instruction) code
+        structures to cache translation of 1 GB pages for data load accesses]
+        structures to cache translation of 2 or 4 MB pages for data load
+        structures to cache translation of 4 KB pages for data load accesses]
+        structures to cache translation of 1 GB pages for data store accesses]
+        structures to cache translation of 2 or 4 MB pages for data store
+        structures to cache translation of 4 KB pages for data store accesses]
+       [Average Parallel L2 cache miss data reads]
+       [Average Parallel L2 cache miss demand Loads]
+       [Average Latency for L2 cache miss demand Loads]
+       [Average Latency for L3 cache miss demand Loads]
+  tma_bottleneck_data_cache_memory_bandwidth
+       [Total pipeline cost of external Memory- or Cache-Bandwidth related
+  tma_bottleneck_data_cache_memory_latency
+       [Total pipeline cost of external Memory- or Cache-Latency related
+        instruction cache misses that hit in the L2 cache]
+        instruction cache misses that miss in the L2 cache]
+  tma_info_memory_core_l3_cache_access_bw_2t
+       [Average per-core data access bandwidth to the L3 cache [GB / sec]]
+       [L2 cache ([RKL+] true) misses per kilo instruction for all request
+       [Offcore requests (L2 cache miss) per kilo instruction for demand RFOs]
+  tma_info_memory_l3_cache_access_bw
+       [Average per-thread data access bandwidth to the L3 cache [GB / sec]]
+       [Average Parallel L2 cache miss data reads]
+       [Average Latency for L2 cache miss demand Loads]
+       [Average Parallel L2 cache miss demand Loads]
+       [Average Latency for L3 cache miss demand Loads]
+       [This metric represents fraction of cycles the CPU spent handling cache
+       [Mem;Backend;CacheHits]
+       [Mem;Backend;CacheHits]
+       [Mem;Backend;CacheHits]
+        missing the L1 Data (L1D) cache]
+       [This metric estimates how often the CPU was stalled due to L2 cache
+        accesses to L3 cache or contended with a sibling Core]
+        frontend due to frontend latency restrictions due to icache misses,
+        limited due to DSB (decoded uop cache) fetch pipeline]
+  tma_icache_misses
+        instruction cache misses]
+        missing the L1 Data (L1D) cache]
+       [This metric estimates how often the CPU was stalled due to L2 cache
+        accesses to L3 cache or contended with a sibling Core]
+        instruction cache misses that hit in the L2 cache]
+        instruction cache misses that miss in the L2 cache]
+        demand load accesses that hit the L1D cache]
+        that hit the L2 cache under unloaded scenarios (possibly L2 latency
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+       [This metric represents fraction of cycles the CPU spent handling cache
+        accesses - load that cross 64-byte cache line boundary]
+        structures to cache translation of 2 or 4 MB pages for (instruction)
+        structures to cache translation of 4 KB pages for (instruction) code
+        structures to cache translation of 1 GB pages for data load accesses]
+        structures to cache translation of 2 or 4 MB pages for data load
+        structures to cache translation of 4 KB pages for data load accesses]
+        structures to cache translation of 1 GB pages for data store accesses]
+        structures to cache translation of 2 or 4 MB pages for data store
+        structures to cache translation of 4 KB pages for data store accesses]
+lpm_l2: [L2 data cache analysis]
+       [L2 cache code hits]
+       [L2 cache code misses per second]
+       [L2 cache code requests per second]
+       [L2 cache data read hits]
+       [L2 cache data read misses per second]
+       [L2 cache data read requests per second]
+       [L2 cache request for ownership (RFO) hits]
+       [L2 cache request for ownership (RFO) misses per second]
+       [L2 cache request for ownership (RFO) requests per second]
+       [L2 cache total in per second]
+       [L2 cache code hits]
+       [L2 cache code misses per second]
+       [L2 cache code requests per second]
+       [L2 cache data read hits]
+       [L2 cache data read misses per second]
+       [L2 cache data read requests per second]
+       [L2 cache request for ownership (RFO) hits]
+       [L2 cache request for ownership (RFO) misses per second]
+       [L2 cache request for ownership (RFO) requests per second]
+       [L2 cache total in per second]
+        frontend due to frontend latency restrictions due to icache misses,
+        limited due to DSB (decoded uop cache) fetch pipeline]
+  tma_icache_misses
+        instruction cache misses]
+        missing the L1 Data (L1D) cache]
+       [This metric estimates how often the CPU was stalled due to L2 cache
+        accesses to L3 cache or contended with a sibling Core]
+        instruction cache misses that hit in the L2 cache]
+        instruction cache misses that miss in the L2 cache]
+        demand load accesses that hit the L1D cache]
+        that hit the L2 cache under unloaded scenarios (possibly L2 latency
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+       [This metric represents fraction of cycles the CPU spent handling cache
+        accesses - load that cross 64-byte cache line boundary]
+        structures to cache translation of 2 or 4 MB pages for (instruction)
+        structures to cache translation of 4 KB pages for (instruction) code
+        structures to cache translation of 1 GB pages for data load accesses]
+        structures to cache translation of 2 or 4 MB pages for data load
+        structures to cache translation of 4 KB pages for data load accesses]
+        structures to cache translation of 1 GB pages for data store accesses]
+        structures to cache translation of 2 or 4 MB pages for data store
+        structures to cache translation of 4 KB pages for data store accesses]
+        structures to cache translation of 2 or 4 MB pages for (instruction)
+        structures to cache translation of 4 KB pages for (instruction) code
+        limited due to DSB (decoded uop cache) fetch pipeline]
+  tma_icache_misses
+        instruction cache misses]
+        frontend due to frontend latency restrictions due to icache misses,
+tma_icache_misses_group: [Metrics contributing to tma_icache_misses category]
+        instruction cache misses that hit in the L2 cache]
+        instruction cache misses that miss in the L2 cache]
+  tma_icache_misses
+        frontend due to instruction cache misses]
+       [Percentage of Memory Execution Bound due to a first level data cache
+  tma_bottleneck_data_cache_memory_bandwidth
+       [Total pipeline cost of external Memory- or Cache-Bandwidth related
+       [Total pipeline cost of DSB (uop cache) hits - subset of the
+       [Total pipeline cost of DSB (uop cache) misses - subset of the
+       [Fraction of Uops delivered by the DSB (aka Decoded ICache; or Uop
+        Cache)]
+       [Total pipeline cost of Instruction Cache misses - subset of the
+        missing the L1 Data (L1D) cache]
+  tma_bottleneck_data_cache_memory_latency
+       [Total pipeline cost of external Memory- or Cache-Latency related
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+        missing the L1 Data (L1D) cache]
+       [This metric represents fraction of cycles the CPU spent handling cache
+        demand load accesses that hit the L1D cache]
+       [This metric represents fraction of cycles the CPU spent handling cache
+        accesses - load that cross 64-byte cache line boundary]
+        that hit the L2 cache under unloaded scenarios (possibly L2 latency
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+        structures to cache translation of 1 GB pages for data load accesses]
+        structures to cache translation of 2 or 4 MB pages for data load
+        structures to cache translation of 4 KB pages for data load accesses]
+        missing the L1 Data (L1D) cache]
+       [This metric estimates how often the CPU was stalled due to L2 cache
+        accesses to L3 cache or contended with a sibling Core]
+        structures to cache translation of 1 GB pages for data store accesses]
+        structures to cache translation of 2 or 4 MB pages for data store
+        structures to cache translation of 4 KB pages for data store accesses]

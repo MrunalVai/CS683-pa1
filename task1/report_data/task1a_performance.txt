@@ -1,0 +1,48 @@
+================ K=3 SIZE=128 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory
+================ K=3 SIZE=256 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory
+================ K=3 SIZE=512 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory
+================ K=3 SIZE=1024 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory
+================ K=3 SIZE=2048 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory
+================ K=3 SIZE=4096 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory
+================ K=5 SIZE=128 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory
+================ K=5 SIZE=256 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory
+================ K=5 SIZE=512 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory
+================ K=5 SIZE=1024 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory
+================ K=5 SIZE=2048 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory
+================ K=5 SIZE=4096 ================
+./run_task1a.sh: line 9: ./bin/conv: No such file or directory
+./run_task1a.sh: line 10: ./bin/conv: No such file or directory
+./run_task1a.sh: line 11: ./bin/conv: No such file or directory

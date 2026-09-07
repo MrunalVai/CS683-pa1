@@ -1,0 +1,29 @@
+rm -rf bin
+mkdir -p bin
+g++ -std=c++17 -O2 -fno-tree-vectorize -mavx2 -mfma -Iinclude -Wall src/conv_naive.cpp src/conv_reorder.cpp src/conv_unroll.cpp src/conv_tile.cpp src/conv_simd.cpp src/conv_optimized.cpp src/main.cpp -o bin/conv 
+src/conv_tile.cpp: In function ‘void conv_tile(const float*, float*, const float*, int, int, int)’:
+src/conv_tile.cpp:8:1: error: version control conflict marker in file
+    8 | <<<<<<< HEAD
+      | ^~~~~~~
+src/conv_tile.cpp:10:24: error: ‘tile_size’ was not declared in this scope
+   10 |     const int tile_h = tile_size;
+      |                        ^~~~~~~~~
+src/conv_tile.cpp:12:1: error: version control conflict marker in file
+   12 | =======
+      | ^~~~~~~
+src/conv_tile.cpp:16:1: error: version control conflict marker in file
+   16 | >>>>>>> 29a4bf3 (Add Task2 Optimized Matmul)
+      | ^~~~~~~
+src/conv_tile.cpp:18:22: error: ‘y0’ was not declared in this scope
+   18 |     for (int y0 = 0; y0 < H; y0 += tile_h) {
+      |                      ^~
+src/conv_tile.cpp:6:9: warning: unused variable ‘in_stride’ [-Wunused-variable]
+    6 |     int in_stride = W + 2 * p;  // padded row stride
+      |         ^~~~~~~~~
+src/conv_tile.cpp:11:15: warning: unused variable ‘tile_w’ [-Wunused-variable]
+   11 |     const int tile_w = tile_size;
+      |               ^~~~~~
+src/conv_tile.cpp:15:15: warning: unused variable ‘TW’ [-Wunused-variable]
+   15 |     const int TW = 16;
+      |               ^~
+make: *** [Makefile:31: bin/conv] Error 1

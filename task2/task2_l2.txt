@@ -1,0 +1,396 @@
+================ naive SIZE=256 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=256 N=256 K=256 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          33.439        1.00      1.00x
+
+ Performance counter stats for './bin/matmul naive 256 256 256':
+
+       621,619,829      cpu_atom/instructions/                                                
+     <not counted>      cpu_core/instructions/                                                  (0.00%)
+     <not counted>      cpu_core/l2_rqsts.miss/                                                 (0.00%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+     <not counted>      cpu_core/L1-dcache-load-misses/                                         (0.00%)
+             1,313      cpu_atom/LLC-load-misses/                                             
+     <not counted>      cpu_core/LLC-load-misses/                                               (0.00%)
+
+       0.256350714 seconds time elapsed
+
+       0.250396000 seconds user
+       0.005985000 seconds sys
+
+
+================ simd SIZE=256 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=256 N=256 K=256 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          53.151        0.63      1.00x
+simd            yes           3.837        8.75     13.85x
+
+ Performance counter stats for './bin/matmul simd 256 256 256':
+
+       647,071,706      cpu_atom/instructions/                                                
+     <not counted>      cpu_core/instructions/                                                  (0.00%)
+     <not counted>      cpu_core/l2_rqsts.miss/                                                 (0.00%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+     <not counted>      cpu_core/L1-dcache-load-misses/                                         (0.00%)
+               893      cpu_atom/LLC-load-misses/                                             
+     <not counted>      cpu_core/LLC-load-misses/                                               (0.00%)
+
+       0.297749000 seconds time elapsed
+
+       0.292667000 seconds user
+       0.004994000 seconds sys
+
+
+================ prefetch SIZE=256 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=256 N=256 K=256 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          18.571        1.81      1.00x
+prefetch        yes           1.641       20.45     11.32x
+
+ Performance counter stats for './bin/matmul prefetch 256 256 256':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+       674,634,227      cpu_core/instructions/                                                
+           189,440      cpu_core/l2_rqsts.miss/                                               
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         3,124,938      cpu_core/L1-dcache-load-misses/                                       
+     <not counted>      cpu_atom/LLC-load-misses/                                               (0.00%)
+            10,185      cpu_core/LLC-load-misses/                                             
+
+       0.129058103 seconds time elapsed
+
+       0.127114000 seconds user
+       0.002001000 seconds sys
+
+
+================ optimized SIZE=256 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=256 N=256 K=256 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          14.266        2.35      1.00x
+optimized       yes           1.117       30.03     12.77x
+
+ Performance counter stats for './bin/matmul optimized 256 256 256':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+       663,281,930      cpu_core/instructions/                                                
+           244,936      cpu_core/l2_rqsts.miss/                                               
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+           245,583      cpu_core/L1-dcache-load-misses/                                       
+     <not counted>      cpu_atom/LLC-load-misses/                                               (0.00%)
+             6,678      cpu_core/LLC-load-misses/                                             
+
+       0.104745299 seconds time elapsed
+
+       0.100704000 seconds user
+       0.004028000 seconds sys
+
+
+================ naive SIZE=512 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         146.314        1.83      1.00x
+
+ Performance counter stats for './bin/matmul naive 512 512 512':
+
+     2,461,754,984      cpu_atom/instructions/                                                  (4.94%)
+     5,018,463,126      cpu_core/instructions/                                                  (95.06%)
+        11,348,546      cpu_core/l2_rqsts.miss/                                                 (95.06%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         1,875,767      cpu_core/L1-dcache-load-misses/                                         (95.06%)
+               810      cpu_atom/LLC-load-misses/                                               (4.94%)
+            11,869      cpu_core/LLC-load-misses/                                               (95.06%)
+
+       0.839547034 seconds time elapsed
+
+       0.834272000 seconds user
+       0.002993000 seconds sys
+
+
+================ simd SIZE=512 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         144.281        1.86      1.00x
+simd            yes          10.154       26.44     14.21x
+
+ Performance counter stats for './bin/matmul simd 512 512 512':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+     5,077,221,911      cpu_core/instructions/                                                
+        19,502,096      cpu_core/l2_rqsts.miss/                                               
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+        45,991,425      cpu_core/L1-dcache-load-misses/                                       
+     <not counted>      cpu_atom/LLC-load-misses/                                               (0.00%)
+            42,514      cpu_core/LLC-load-misses/                                             
+
+       0.935921229 seconds time elapsed
+
+       0.928754000 seconds user
+       0.006998000 seconds sys
+
+
+================ prefetch SIZE=512 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         163.228        1.64      1.00x
+prefetch        yes          11.105       24.17     14.70x
+
+ Performance counter stats for './bin/matmul prefetch 512 512 512':
+
+     3,493,538,371      cpu_atom/instructions/                                                  (5.36%)
+     5,423,280,231      cpu_core/instructions/                                                  (94.64%)
+        15,069,536      cpu_core/l2_rqsts.miss/                                                 (94.64%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+        12,394,193      cpu_core/L1-dcache-load-misses/                                         (94.64%)
+            13,272      cpu_atom/LLC-load-misses/                                               (5.36%)
+            22,300      cpu_core/LLC-load-misses/                                               (94.64%)
+
+       1.037277699 seconds time elapsed
+
+       1.028483000 seconds user
+       0.007995000 seconds sys
+
+
+================ optimized SIZE=512 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         151.156        1.78      1.00x
+optimized       yes           8.310       32.30     18.19x
+
+ Performance counter stats for './bin/matmul optimized 512 512 512':
+
+     3,485,207,540      cpu_atom/instructions/                                                  (2.43%)
+     5,269,616,203      cpu_core/instructions/                                                  (97.57%)
+        11,489,193      cpu_core/l2_rqsts.miss/                                                 (97.57%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+         7,862,150      cpu_core/L1-dcache-load-misses/                                         (97.57%)
+            51,552      cpu_atom/LLC-load-misses/                                               (2.43%)
+            11,883      cpu_core/LLC-load-misses/                                               (97.57%)
+
+       0.949120263 seconds time elapsed
+
+       0.940741000 seconds user
+       0.008006000 seconds sys
+
+
+================ naive SIZE=1024 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1149.256        1.87      1.00x
+
+ Performance counter stats for './bin/matmul naive 1024 1024 1024':
+
+    23,349,484,681      cpu_atom/instructions/                                                  (2.20%)
+    39,274,612,239      cpu_core/instructions/                                                  (97.80%)
+       422,874,061      cpu_core/l2_rqsts.miss/                                                 (97.80%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+        29,744,056      cpu_core/L1-dcache-load-misses/                                         (97.80%)
+            77,435      cpu_atom/LLC-load-misses/                                               (2.20%)
+           185,088      cpu_core/LLC-load-misses/                                               (97.80%)
+
+       7.364252699 seconds time elapsed
+
+       7.335962000 seconds user
+       0.023996000 seconds sys
+
+
+================ simd SIZE=1024 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1276.037        1.68      1.00x
+simd            yes         188.322       11.40      6.78x
+
+ Performance counter stats for './bin/matmul simd 1024 1024 1024':
+
+    17,338,294,292      cpu_atom/instructions/                                                  (4.25%)
+    41,356,272,767      cpu_core/instructions/                                                  (95.75%)
+       781,861,642      cpu_core/l2_rqsts.miss/                                                 (95.75%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+       182,883,746      cpu_core/L1-dcache-load-misses/                                         (95.75%)
+           341,656      cpu_atom/LLC-load-misses/                                               (4.25%)
+           382,079      cpu_core/LLC-load-misses/                                               (95.75%)
+
+       8.472156229 seconds time elapsed
+
+       8.449975000 seconds user
+       0.017995000 seconds sys
+
+
+================ prefetch SIZE=1024 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1226.368        1.75      1.00x
+prefetch        yes         139.178       15.43      8.81x
+
+ Performance counter stats for './bin/matmul prefetch 1024 1024 1024':
+
+    18,058,043,630      cpu_atom/instructions/                                                  (4.89%)
+    43,560,531,649      cpu_core/instructions/                                                  (95.11%)
+       457,468,274      cpu_core/l2_rqsts.miss/                                                 (95.11%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+        91,296,704      cpu_core/L1-dcache-load-misses/                                         (95.11%)
+           375,318      cpu_atom/LLC-load-misses/                                               (4.89%)
+           496,603      cpu_core/LLC-load-misses/                                               (95.11%)
+
+       8.822708892 seconds time elapsed
+
+       8.793052000 seconds user
+       0.024991000 seconds sys
+
+
+================ optimized SIZE=1024 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1708.235        1.26      1.00x
+optimized       yes          84.856       25.31     20.13x
+
+ Performance counter stats for './bin/matmul optimized 1024 1024 1024':
+
+    20,767,012,719      cpu_atom/instructions/                                                  (10.31%)
+    43,967,348,019      cpu_core/instructions/                                                  (89.69%)
+       461,895,292      cpu_core/l2_rqsts.miss/                                                 (89.69%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+        46,845,472      cpu_core/L1-dcache-load-misses/                                         (89.69%)
+           211,488      cpu_atom/LLC-load-misses/                                               (10.31%)
+           338,214      cpu_core/LLC-load-misses/                                               (89.69%)
+
+      10.057936653 seconds time elapsed
+
+      10.016650000 seconds user
+       0.024986000 seconds sys
+
+
+================ naive SIZE=2048 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes       10880.735        1.58      1.00x
+
+ Performance counter stats for './bin/matmul naive 2048 2048 2048':
+
+   130,643,740,244      cpu_atom/instructions/                                                  (1.36%)
+   313,060,545,171      cpu_core/instructions/                                                  (98.64%)
+     5,384,684,467      cpu_core/l2_rqsts.miss/                                                 (98.64%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+       190,219,658      cpu_core/L1-dcache-load-misses/                                         (98.64%)
+         7,679,376      cpu_atom/LLC-load-misses/                                               (1.36%)
+        10,693,520      cpu_core/LLC-load-misses/                                               (98.64%)
+
+      61.761414860 seconds time elapsed
+
+      61.650482000 seconds user
+       0.079973000 seconds sys
+
+
+================ simd SIZE=2048 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8132.283        2.11      1.00x
+simd            yes        2951.682        5.82      2.76x
+
+ Performance counter stats for './bin/matmul simd 2048 2048 2048':
+
+   156,286,337,830      cpu_atom/instructions/                                                  (2.44%)
+   325,830,360,834      cpu_core/instructions/                                                  (97.56%)
+     8,965,972,251      cpu_core/l2_rqsts.miss/                                                 (97.56%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+     1,538,991,146      cpu_core/L1-dcache-load-misses/                                         (97.56%)
+        10,826,552      cpu_atom/LLC-load-misses/                                               (2.44%)
+       586,262,490      cpu_core/LLC-load-misses/                                               (97.56%)
+
+      74.813753361 seconds time elapsed
+
+      74.663898000 seconds user
+       0.102969000 seconds sys
+
+
+================ prefetch SIZE=2048 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8327.507        2.06      1.00x
+prefetch        yes        1507.319       11.40      5.52x
+
+ Performance counter stats for './bin/matmul prefetch 2048 2048 2048':
+
+   161,835,375,515      cpu_atom/instructions/                                                  (0.12%)
+   337,702,586,129      cpu_core/instructions/                                                  (99.88%)
+     5,487,224,801      cpu_core/l2_rqsts.miss/                                                 (99.88%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+       257,682,400      cpu_core/L1-dcache-load-misses/                                         (99.88%)
+        78,719,047      cpu_atom/LLC-load-misses/                                               (0.12%)
+        26,231,759      cpu_core/LLC-load-misses/                                               (99.88%)
+
+      59.104740982 seconds time elapsed
+
+      58.993993000 seconds user
+       0.083972000 seconds sys
+
+
+================ optimized SIZE=2048 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8417.263        2.04      1.00x
+optimized       yes         485.518       35.38     17.34x
+
+ Performance counter stats for './bin/matmul optimized 2048 2048 2048':
+
+   101,729,715,095      cpu_atom/instructions/                                                  (1.51%)
+   334,992,495,903      cpu_core/instructions/                                                  (98.49%)
+     5,431,390,880      cpu_core/l2_rqsts.miss/                                                 (98.49%)
+   <not supported>      cpu_atom/L1-dcache-load-misses/                                       
+       194,039,267      cpu_core/L1-dcache-load-misses/                                         (98.49%)
+         5,981,287      cpu_atom/LLC-load-misses/                                               (1.51%)
+        22,252,309      cpu_core/LLC-load-misses/                                               (98.49%)
+
+      56.682163030 seconds time elapsed
+
+      56.449373000 seconds user
+       0.167926000 seconds sys
+
+

@@ -1,0 +1,18 @@
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1262.439        1.70      1.00x
+prefetch        yes         124.220       17.29     10.16x
+
+ Performance counter stats for './bin/matmul prefetch 1024 1024 1024':
+
+       823,075,823      cpu_core/sw_prefetch_access.any/                                        (95.78%)
+
+       8.051767368 seconds time elapsed
+
+       8.015901000 seconds user
+       0.019997000 seconds sys
+
+

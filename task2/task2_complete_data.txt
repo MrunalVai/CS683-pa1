@@ -1,0 +1,849 @@
+============================================================
+TASK 2 COMPLETE REPORT DATA
+============================================================
+
+================ SYSTEM INFORMATION ================
+Mon Sep  7 03:37:37 PM IST 2026
+Linux mrunal-Inspiron-14-5430 7.0.0-29-generic #29-Ubuntu SMP PREEMPT_DYNAMIC Fri Jul 17 20:52:35 UTC 2026 x86_64 GNU/Linux
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           39 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  12
+On-line CPU(s) list:                     0-11
+Vendor ID:                               GenuineIntel
+Model name:                              13th Gen Intel(R) Core(TM) i5-1335U
+CPU family:                              6
+Model:                                   186
+Thread(s) per core:                      2
+Core(s) per socket:                      10
+Socket(s):                               1
+Stepping:                                3
+CPU(s) scaling MHz:                      21%
+CPU max MHz:                             4600.0000
+CPU min MHz:                             400.0000
+BogoMIPS:                                4992.00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+Virtualization:                          VT-x
+L1d cache:                               352 KiB (10 instances)
+L1i cache:                               576 KiB (10 instances)
+L2 cache:                                6.5 MiB (4 instances)
+L3 cache:                                12 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-11
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Mitigation; Clear Register File
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Mitigation; IBPB before exit to userspace
+g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+Copyright (C) 2025 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+perf version 7.0.12
+Pinned benchmark CPU: 0
+
+================ SIMD SUPPORT ================
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+
+================ CACHE INFORMATION ================
+NAME ONE-SIZE ALL-SIZE WAYS TYPE        LEVEL  SETS PHY-LINE COHERENCY-SIZE
+L1d       48K     352K   12 Data            1    64        1             64
+L1i       32K     576K    8 Instruction     1    64        1             64
+L2       1.3M     6.5M   10 Unified         2  2048        1             64
+L3        12M      12M   12 Unified         3 16384        1             64
+32768
+
+================ PERF EVENT AVAILABILITY ================
+        L2_RQSTS.MISS]. Unit: cpu_core]
+  l2_rqsts.miss
+  sw_prefetch_access.any
+  sw_prefetch_access.nta
+  sw_prefetch_access.prefetchw
+  sw_prefetch_access.t0
+  sw_prefetch_access.t1_t2
+  llc-load-misses
+  l1-dcache-load-misses
+  llc-load-misses
+
+============================================================
+TASK 2A: SOFTWARE PREFETCHING
+============================================================
+
+================ 2A.1 PREFETCH PERFORMANCE VS MATRIX SIZE ================
+
+######## PREFETCH MATRIX SIZE N=128 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=128 N=128 K=128 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           3.255        1.29      1.00x
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=128 N=128 K=128 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           2.196        1.91      1.00x
+prefetch        yes           0.184       22.76     11.91x
+
+######## PREFETCH MATRIX SIZE N=256 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=256 N=256 K=256 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          17.044        1.97      1.00x
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=256 N=256 K=256 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          15.818        2.12      1.00x
+prefetch        yes           1.407       23.85     11.24x
+
+######## PREFETCH MATRIX SIZE N=512 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         104.988        2.56      1.00x
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         103.406        2.60      1.00x
+prefetch        yes           8.570       31.32     12.07x
+
+######## PREFETCH MATRIX SIZE N=1024 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         933.544        2.30      1.00x
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1124.829        1.91      1.00x
+prefetch        yes         178.841       12.01      6.29x
+
+######## PREFETCH MATRIX SIZE N=1536 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1536 N=1536 K=1536 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        3214.236        2.25      1.00x
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1536 N=1536 K=1536 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        3224.459        2.25      1.00x
+prefetch        yes         366.896       19.75      8.79x
+
+######## PREFETCH MATRIX SIZE N=2048 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8229.059        2.09      1.00x
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8230.916        2.09      1.00x
+prefetch        yes         977.043       17.58      8.42x
+
+================ 2A.2 PREFETCH CACHE METRICS VS MATRIX SIZE ================
+
+######## PREFETCH CACHE METRICS N=512 ########
+----- PERF stage=prefetch N=512 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         108.080        2.48      1.00x
+prefetch        yes           9.136       29.38     11.83x
+
+ Performance counter stats for './bin/matmul prefetch 512 512 512':
+
+     5,316,468,908      cpu_core/instructions/                                                
+     1,627,477,037      cpu_core/cycles/                                                      
+         4,787,176      cpu_core/L1-dcache-load-misses/                                       
+        12,308,033      cpu_core/l2_rqsts.miss/                                               
+             9,834      cpu_core/LLC-load-misses/                                             
+        92,225,646      cpu_core/sw_prefetch_access.any/                                      
+
+       0.706441403 seconds time elapsed
+
+       0.694197000 seconds user
+       0.009002000 seconds sys
+
+
+
+######## PREFETCH CACHE METRICS N=1024 ########
+----- PERF stage=prefetch N=1024 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         908.255        2.36      1.00x
+prefetch        yes         107.583       19.96      8.44x
+
+ Performance counter stats for './bin/matmul prefetch 1024 1024 1024':
+
+    42,290,151,585      cpu_core/instructions/                                                
+    13,537,388,953      cpu_core/cycles/                                                      
+        42,253,306      cpu_core/L1-dcache-load-misses/                                       
+       436,626,399      cpu_core/l2_rqsts.miss/                                               
+            91,481      cpu_core/LLC-load-misses/                                             
+       788,207,544      cpu_core/sw_prefetch_access.any/                                      
+
+       6.138034385 seconds time elapsed
+
+       6.100509000 seconds user
+       0.014005000 seconds sys
+
+
+
+######## PREFETCH CACHE METRICS N=2048 ########
+----- PERF stage=prefetch N=2048 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8221.647        2.09      1.00x
+prefetch        yes         973.687       17.64      8.44x
+
+ Performance counter stats for './bin/matmul prefetch 2048 2048 2048':
+
+   337,460,828,750      cpu_core/instructions/                                                
+   118,738,629,377      cpu_core/cycles/                                                      
+       199,037,974      cpu_core/L1-dcache-load-misses/                                       
+     5,357,511,761      cpu_core/l2_rqsts.miss/                                               
+        23,377,231      cpu_core/LLC-load-misses/                                             
+     6,509,289,707      cpu_core/sw_prefetch_access.any/                                      
+
+      54.793798035 seconds time elapsed
+
+      54.480743000 seconds user
+       0.096978000 seconds sys
+
+
+
+================ 2A.3 PREFETCH DISTANCE SWEEP ================
+
+######## PREFETCH_DISTANCE PD=8 N=512 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         122.984        2.18      1.00x
+prefetch        yes           8.868       30.27     13.87x
+----- PERF stage=prefetch N=512 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         103.772        2.59      1.00x
+prefetch        yes           8.904       30.15     11.65x
+
+ Performance counter stats for './bin/matmul prefetch 512 512 512':
+
+     5,316,021,836      cpu_core/instructions/                                                
+     1,630,181,794      cpu_core/cycles/                                                      
+         4,850,621      cpu_core/L1-dcache-load-misses/                                       
+        15,273,455      cpu_core/l2_rqsts.miss/                                               
+             7,932      cpu_core/LLC-load-misses/                                             
+        92,222,726      cpu_core/sw_prefetch_access.any/                                      
+
+       0.694641320 seconds time elapsed
+
+       0.687202000 seconds user
+       0.004001000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=8 N=1024 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         919.699        2.33      1.00x
+prefetch        yes         103.413       20.77      8.89x
+----- PERF stage=prefetch N=1024 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         902.712        2.38      1.00x
+prefetch        yes          99.469       21.59      9.08x
+
+ Performance counter stats for './bin/matmul prefetch 1024 1024 1024':
+
+    42,289,007,414      cpu_core/instructions/                                                
+    13,563,496,982      cpu_core/cycles/                                                      
+        42,191,978      cpu_core/L1-dcache-load-misses/                                       
+       436,517,714      cpu_core/l2_rqsts.miss/                                               
+            88,855      cpu_core/LLC-load-misses/                                             
+       788,208,183      cpu_core/sw_prefetch_access.any/                                      
+
+       6.079409527 seconds time elapsed
+
+       6.044848000 seconds user
+       0.015002000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=8 N=2048 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8217.495        2.09      1.00x
+prefetch        yes         932.377       18.43      8.81x
+----- PERF stage=prefetch N=2048 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        9909.700        1.73      1.00x
+prefetch        yes        1043.416       16.47      9.50x
+
+ Performance counter stats for './bin/matmul prefetch 2048 2048 2048':
+
+   337,542,764,989      cpu_core/instructions/                                                
+   116,326,131,623      cpu_core/cycles/                                                      
+       206,444,677      cpu_core/L1-dcache-load-misses/                                       
+     5,384,247,596      cpu_core/l2_rqsts.miss/                                               
+        20,346,040      cpu_core/LLC-load-misses/                                             
+     6,509,550,713      cpu_core/sw_prefetch_access.any/                                      
+
+      62.923584355 seconds time elapsed
+
+      62.580933000 seconds user
+       0.104999000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=16 N=512 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         152.375        1.76      1.00x
+prefetch        yes          14.062       19.09     10.84x
+----- PERF stage=prefetch N=512 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         111.130        2.42      1.00x
+prefetch        yes           8.892       30.19     12.50x
+
+ Performance counter stats for './bin/matmul prefetch 512 512 512':
+
+     5,317,150,822      cpu_core/instructions/                                                
+     1,636,082,190      cpu_core/cycles/                                                      
+         4,821,714      cpu_core/L1-dcache-load-misses/                                       
+        11,674,828      cpu_core/l2_rqsts.miss/                                               
+            10,896      cpu_core/LLC-load-misses/                                             
+        92,225,156      cpu_core/sw_prefetch_access.any/                                      
+
+       0.790624206 seconds time elapsed
+
+       0.783390000 seconds user
+       0.004007000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=16 N=1024 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1327.615        1.62      1.00x
+prefetch        yes         165.539       12.97      8.02x
+----- PERF stage=prefetch N=1024 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1367.244        1.57      1.00x
+prefetch        yes         167.109       12.85      8.18x
+
+ Performance counter stats for './bin/matmul prefetch 1024 1024 1024':
+
+    42,308,368,559      cpu_core/instructions/                                                
+    13,566,638,463      cpu_core/cycles/                                                      
+        43,804,388      cpu_core/L1-dcache-load-misses/                                       
+       443,280,627      cpu_core/l2_rqsts.miss/                                               
+           163,201      cpu_core/LLC-load-misses/                                             
+       788,238,263      cpu_core/sw_prefetch_access.any/                                      
+
+       8.772981147 seconds time elapsed
+
+       8.724400000 seconds user
+       0.022995000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=16 N=2048 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8870.648        1.94      1.00x
+prefetch        yes         957.439       17.94      9.26x
+----- PERF stage=prefetch N=2048 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8287.824        2.07      1.00x
+prefetch        yes         979.813       17.53      8.46x
+
+ Performance counter stats for './bin/matmul prefetch 2048 2048 2048':
+
+   337,456,977,930      cpu_core/instructions/                                                
+   118,844,569,628      cpu_core/cycles/                                                      
+       197,004,588      cpu_core/L1-dcache-load-misses/                                       
+     5,483,893,268      cpu_core/l2_rqsts.miss/                                               
+        23,183,740      cpu_core/LLC-load-misses/                                             
+     6,509,533,576      cpu_core/sw_prefetch_access.any/                                      
+
+      54.680082143 seconds time elapsed
+
+      54.392966000 seconds user
+       0.085998000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=32 N=512 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         158.989        1.69      1.00x
+prefetch        yes           9.433       28.46     16.86x
+----- PERF stage=prefetch N=512 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         106.583        2.52      1.00x
+prefetch        yes           9.189       29.21     11.60x
+
+ Performance counter stats for './bin/matmul prefetch 512 512 512':
+
+     5,316,859,512      cpu_core/instructions/                                                
+     1,635,511,712      cpu_core/cycles/                                                      
+         4,776,627      cpu_core/L1-dcache-load-misses/                                       
+        14,972,168      cpu_core/l2_rqsts.miss/                                               
+            10,603      cpu_core/LLC-load-misses/                                             
+        92,229,095      cpu_core/sw_prefetch_access.any/                                      
+
+       0.743288637 seconds time elapsed
+
+       0.738501000 seconds user
+       0.002004000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=32 N=1024 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         933.088        2.30      1.00x
+prefetch        yes         105.868       20.28      8.81x
+----- PERF stage=prefetch N=1024 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         896.075        2.40      1.00x
+prefetch        yes         106.060       20.25      8.45x
+
+ Performance counter stats for './bin/matmul prefetch 1024 1024 1024':
+
+    42,289,387,529      cpu_core/instructions/                                                
+    13,569,893,067      cpu_core/cycles/                                                      
+        42,449,342      cpu_core/L1-dcache-load-misses/                                       
+       436,420,184      cpu_core/l2_rqsts.miss/                                               
+            96,249      cpu_core/LLC-load-misses/                                             
+       788,321,986      cpu_core/sw_prefetch_access.any/                                      
+
+       6.113396682 seconds time elapsed
+
+       6.078677000 seconds user
+       0.015004000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=32 N=2048 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8309.226        2.07      1.00x
+prefetch        yes         955.291       17.98      8.70x
+----- PERF stage=prefetch N=2048 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8272.640        2.08      1.00x
+prefetch        yes         957.478       17.94      8.64x
+
+ Performance counter stats for './bin/matmul prefetch 2048 2048 2048':
+
+   337,458,143,088      cpu_core/instructions/                                                
+   118,553,330,863      cpu_core/cycles/                                                      
+       196,343,882      cpu_core/L1-dcache-load-misses/                                       
+     5,426,485,028      cpu_core/l2_rqsts.miss/                                               
+        23,668,721      cpu_core/LLC-load-misses/                                             
+     6,509,123,993      cpu_core/sw_prefetch_access.any/                                      
+
+      54.746986116 seconds time elapsed
+
+      54.450020000 seconds user
+       0.092011000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=64 N=512 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         146.062        1.84      1.00x
+prefetch        yes           8.962       29.95     16.30x
+----- PERF stage=prefetch N=512 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         103.688        2.59      1.00x
+prefetch        yes           9.127       29.41     11.36x
+
+ Performance counter stats for './bin/matmul prefetch 512 512 512':
+
+     5,316,519,681      cpu_core/instructions/                                                
+     1,631,524,647      cpu_core/cycles/                                                      
+         4,805,526      cpu_core/L1-dcache-load-misses/                                       
+        16,319,277      cpu_core/l2_rqsts.miss/                                               
+             9,016      cpu_core/LLC-load-misses/                                             
+        92,226,043      cpu_core/sw_prefetch_access.any/                                      
+
+       0.723571078 seconds time elapsed
+
+       0.715011000 seconds user
+       0.004986000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=64 N=1024 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         945.046        2.27      1.00x
+prefetch        yes         104.760       20.50      9.02x
+----- PERF stage=prefetch N=1024 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         918.344        2.34      1.00x
+prefetch        yes         102.696       20.91      8.94x
+
+ Performance counter stats for './bin/matmul prefetch 1024 1024 1024':
+
+    42,289,407,098      cpu_core/instructions/                                                
+    13,569,191,091      cpu_core/cycles/                                                      
+        42,362,866      cpu_core/L1-dcache-load-misses/                                       
+       436,714,919      cpu_core/l2_rqsts.miss/                                               
+            90,039      cpu_core/LLC-load-misses/                                             
+       788,242,961      cpu_core/sw_prefetch_access.any/                                      
+
+       6.096625726 seconds time elapsed
+
+       6.045185000 seconds user
+       0.022011000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=64 N=2048 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8273.400        2.08      1.00x
+prefetch        yes         979.995       17.53      8.44x
+----- PERF stage=prefetch N=2048 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes       10846.320        1.58      1.00x
+prefetch        yes        1295.315       13.26      8.37x
+
+ Performance counter stats for './bin/matmul prefetch 2048 2048 2048':
+
+   337,571,762,663      cpu_core/instructions/                                                
+   117,772,972,610      cpu_core/cycles/                                                      
+       211,645,353      cpu_core/L1-dcache-load-misses/                                       
+     5,645,687,748      cpu_core/l2_rqsts.miss/                                               
+        20,173,560      cpu_core/LLC-load-misses/                                             
+     6,510,153,272      cpu_core/sw_prefetch_access.any/                                      
+
+      65.316038587 seconds time elapsed
+
+      64.965349000 seconds user
+       0.111979000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=96 N=512 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         131.930        2.03      1.00x
+prefetch        yes          17.244       15.57      7.65x
+----- PERF stage=prefetch N=512 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         115.863        2.32      1.00x
+prefetch        yes           9.433       28.46     12.28x
+
+ Performance counter stats for './bin/matmul prefetch 512 512 512':
+
+     5,317,056,423      cpu_core/instructions/                                                
+     1,638,229,188      cpu_core/cycles/                                                      
+         4,843,570      cpu_core/L1-dcache-load-misses/                                       
+        14,016,061      cpu_core/l2_rqsts.miss/                                               
+            11,864      cpu_core/LLC-load-misses/                                             
+        92,235,450      cpu_core/sw_prefetch_access.any/                                      
+
+       0.755180972 seconds time elapsed
+
+       0.751113000 seconds user
+       0.003995000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=96 N=1024 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1043.402        2.06      1.00x
+prefetch        yes         116.913       18.37      8.92x
+----- PERF stage=prefetch N=1024 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1005.713        2.14      1.00x
+prefetch        yes          90.057       23.85     11.17x
+
+ Performance counter stats for './bin/matmul prefetch 1024 1024 1024':
+
+    42,294,797,975      cpu_core/instructions/                                                
+    13,621,211,342      cpu_core/cycles/                                                      
+        42,474,143      cpu_core/L1-dcache-load-misses/                                       
+       437,361,984      cpu_core/l2_rqsts.miss/                                               
+           145,127      cpu_core/LLC-load-misses/                                             
+       788,211,179      cpu_core/sw_prefetch_access.any/                                      
+
+       6.481120635 seconds time elapsed
+
+       6.445347000 seconds user
+       0.015010000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=96 N=2048 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        9770.805        1.76      1.00x
+prefetch        yes        1310.841       13.11      7.45x
+----- PERF stage=prefetch N=2048 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes       10981.485        1.56      1.00x
+prefetch        yes         957.726       17.94     11.47x
+
+ Performance counter stats for './bin/matmul prefetch 2048 2048 2048':
+
+   337,608,256,843      cpu_core/instructions/                                                
+   115,498,626,369      cpu_core/cycles/                                                      
+       215,402,420      cpu_core/L1-dcache-load-misses/                                       
+     5,706,061,326      cpu_core/l2_rqsts.miss/                                               
+        17,515,626      cpu_core/LLC-load-misses/                                             
+     6,509,266,288      cpu_core/sw_prefetch_access.any/                                      
+
+      68.541367797 seconds time elapsed
+
+      68.146406000 seconds user
+       0.109974000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=128 N=512 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         165.368        1.62      1.00x
+prefetch        yes          13.200       20.34     12.53x
+----- PERF stage=prefetch N=512 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         151.430        1.77      1.00x
+prefetch        yes          14.255       18.83     10.62x
+
+ Performance counter stats for './bin/matmul prefetch 512 512 512':
+
+     5,319,922,660      cpu_core/instructions/                                                
+     1,661,541,178      cpu_core/cycles/                                                      
+         4,891,999      cpu_core/L1-dcache-load-misses/                                       
+        14,868,510      cpu_core/l2_rqsts.miss/                                               
+            27,749      cpu_core/LLC-load-misses/                                             
+        92,216,340      cpu_core/sw_prefetch_access.any/                                      
+
+       0.989250283 seconds time elapsed
+
+       0.975294000 seconds user
+       0.011014000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=128 N=1024 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1195.680        1.80      1.00x
+prefetch        yes         143.224       14.99      8.35x
+----- PERF stage=prefetch N=1024 -----
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1496.612        1.43      1.00x
+prefetch        yes         165.270       12.99      9.06x
+
+ Performance counter stats for './bin/matmul prefetch 1024 1024 1024':
+
+    42,319,667,835      cpu_core/instructions/                                                
+    13,663,388,478      cpu_core/cycles/                                                      
+        44,769,982      cpu_core/L1-dcache-load-misses/                                       
+       451,530,053      cpu_core/l2_rqsts.miss/                                               
+           178,795      cpu_core/LLC-load-misses/                                             
+       788,251,959      cpu_core/sw_prefetch_access.any/                                      
+
+      10.053821656 seconds time elapsed
+
+       9.964390000 seconds user
+       0.036968000 seconds sys
+
+
+
+######## PREFETCH_DISTANCE PD=128 N=2048 ########
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8576.381        2.00      1.00x
+prefetch        yes        1397.613       12.29      6.14x
+----- PERF stage=prefetch N=2048 -----
+./bin/matmul: Interrupt
+
+ Performance counter stats for './bin/matmul prefetch 2048 2048 2048':
+
+   139,057,015,988      cpu_core/instructions/                                                
+    48,839,573,047      cpu_core/cycles/                                                      
+        49,248,754      cpu_core/L1-dcache-load-misses/                                       
+     2,374,516,097      cpu_core/l2_rqsts.miss/                                               
+         6,811,820      cpu_core/LLC-load-misses/                                             
+           126,560      cpu_core/sw_prefetch_access.any/                                      
+
+      26.179272666 seconds time elapsed
+
+      25.987092000 seconds user
+       0.091000000 seconds sys
+
+

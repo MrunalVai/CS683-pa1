@@ -1,0 +1,107 @@
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+       [Counts demand reads for ownership (RFO) and software prefetches for
+        exclusive ownership (PREFETCHW) that have any type of response. Unit:
+       [Counts demand reads for ownership (RFO) and software prefetches for
+        exclusive ownership (PREFETCHW) that were supplied by the L3 cache.
+       [Counts demand reads for ownership (RFO) and software prefetches for
+        exclusive ownership (PREFETCHW) that were supplied by the L3 cache
+       [Counts demand reads for ownership (RFO) and software prefetches for
+        exclusive ownership (PREFETCHW) that were supplied by the L3 cache
+       [Counts demand reads for ownership (RFO) and software prefetches for
+        exclusive ownership (PREFETCHW) that were supplied by the L3 cache
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that have any type of response. Unit: cpu_atom]
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that were supplied by the L3 cache. Unit:
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that were supplied by the L3 cache where a
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that were supplied by the L3 cache where a
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that were supplied by the L3 cache where a
+       [Cache lines that have been L2 hardware prefetched but not used by
+       [SW prefetch requests that hit L2 cache. Unit: cpu_core]
+       [SW prefetch requests that miss L2 cache. Unit: cpu_core]
+        prefetches to the L3). Unit: cpu_core]
+        prefetches to the L3). Unit: cpu_core]
+        prefetches for exclusive ownership (PREFETCHW) that have any type of
+        prefetches for exclusive ownership (PREFETCHW) that resulted in a
+        and prefetches to the core caches (L1 or L2) that hit in the L3 or
+       [Demand and prefetch data reads. Unit: cpu_core]
+  sw_prefetch_access.any
+       [Counts the number of PREFETCHNTA,PREFETCHW,PREFETCHT0,PREFETCHT1 or
+        PREFETCHT2 instructions executed. Unit: cpu_core]
+  sw_prefetch_access.nta
+       [Number of PREFETCHNTA instructions executed. Unit: cpu_core]
+  sw_prefetch_access.prefetchw
+       [Number of PREFETCHW instructions executed. Unit: cpu_core]
+  sw_prefetch_access.t0
+       [Number of PREFETCHT0 instructions executed. Unit: cpu_core]
+  sw_prefetch_access.t1_t2
+       [Number of PREFETCHT1 or PREFETCHT2 instructions executed. Unit:
+        this may vary depending on your CPU. This may include prefetches and
+        this may vary depending on your CPU. This may include prefetches and
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+       [Counts demand instruction fetches and L1 instruction cache prefetches
+       [Counts demand reads for ownership (RFO) and software prefetches for
+        exclusive ownership (PREFETCHW) that were supplied by DRAM. Unit:
+       [Counts demand reads for ownership (RFO) and software prefetches for
+        exclusive ownership (PREFETCHW) that were not supplied by the L3
+       [Counts demand reads for ownership (RFO) and software prefetches for
+        exclusive ownership (PREFETCHW) that were not supplied by the L3
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that were supplied by DRAM. Unit: cpu_atom]
+       [Counts L1 data cache software prefetches which include T0/T1/T2 and
+        NTA (except PREFETCHW) that were not supplied by the L3 cache. Unit:
+        prefetches for exclusive ownership (PREFETCHW) that were not supplied
+  load_hit_prefetch.swpf
+        (FB) allocated for software prefetch. Unit: cpu_core]
+        Doesn't include prefetches [This event is alias to
+       [Number of all coherent Data Read entries. Doesn't include prefetches
+        Doesn't include prefetches [This event is alias to
+       [Number of all coherent Data Read entries. Doesn't include prefetches
+  unc_m_prefetch_rd
+       [Incoming read prefetch request from IA. Unit: uncore_imc]
+  l1_prefetch_miss_rate
+       [L1 prefetch miss rate]
+Prefetches: [Grouping from Top-down Microarchitecture Analysis Metrics spreadsheet]
+       [Instructions per Software prefetch instruction (of any type:
+        NTA/T0/T1/T2/Prefetch) (lower number means higher occurrence rate)]
+  tma_info_memory_prefetches_useless_hwpf
+       [Rate of L2 HW prefetched lines that were not used by demand accesses]
+       [Load hit software prefetches per second]
+lpm_swpf: [Software prefetch instruction breakdown]
+       [Software prefetch NTA instructions as a percent of all prefetch
+       [Software prefetch NTA instructions per second]
+       [Software prefetch T0 instructions as a percent of all prefetch
+       [Software prefetch T0 instructions per second]
+       [Software prefetch T1 or T2 instructions as a percent of all prefetch
+       [Software prefetch T1 or T2 instructions per second]
+       [Software prefetch W instructions as a percent of all prefetch
+       [Software prefetch W instructions per second]
+       [Software prefetch instructions per second]
+       [Average number of instructions between software prefetches]
+       [Average number of loads between software prefetches]
+       [Software prefetch NTA instructions as a percent of all prefetch
+       [Software prefetch NTA instructions per second]
+       [Software prefetch T0 instructions as a percent of all prefetch
+       [Software prefetch T0 instructions per second]
+       [Software prefetch T1 or T2 instructions as a percent of all prefetch
+       [Software prefetch T1 or T2 instructions per second]
+       [Software prefetch W instructions as a percent of all prefetch
+       [Software prefetch W instructions per second]
+       [Software prefetch NTA instructions as a percent of all prefetch
+       [Software prefetch NTA instructions per second]
+       [Software prefetch T0 instructions as a percent of all prefetch
+       [Software prefetch T0 instructions per second]
+       [Software prefetch T1 or T2 instructions as a percent of all prefetch
+       [Software prefetch T1 or T2 instructions per second]
+       [Software prefetch W instructions as a percent of all prefetch
+       [Software prefetch W instructions per second]
+       [Software prefetch instructions per second]
+       [Average number of instructions between software prefetches]
+       [Average number of loads between software prefetches]

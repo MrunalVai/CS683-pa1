@@ -1,0 +1,12 @@
+CPU 0: 0
+CPU 1: 0
+CPU 2: 0
+CPU 3: 0
+CPU 4: 4
+CPU 5: 4
+CPU 6: 4
+CPU 7: 4
+CPU 8: 4
+CPU 9: 4
+CPU 10: 4
+CPU 11: 4

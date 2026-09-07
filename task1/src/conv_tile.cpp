@@ -5,9 +5,15 @@ void conv_tile(const float* in, float* out, const float* ker,
     int p = K / 2;
     int in_stride = W + 2 * p;  // padded row stride
 
+<<<<<<< HEAD
     const int tile_size = 32;
     const int tile_h = tile_size;
     const int tile_w = tile_size;
+=======
+    // Tile dimensions to evaluate L1-D cache behavior
+    const int TH = 16;
+    const int TW = 16;
+>>>>>>> 29a4bf3 (Add Task2 Optimized Matmul)
 
     for (int y0 = 0; y0 < H; y0 += tile_h) {
         int y_max = (y0 + tile_h < H) ? y0 + tile_h : H;

@@ -1,0 +1,3 @@
+rm -rf bin
+mkdir -p bin
+g++ -std=c++17 -O2 -fno-tree-vectorize -mavx2 -mfma -Iinclude -Wall src/matmul_naive.cpp src/matmul_simd.cpp src/matmul_prefetch.cpp src/matmul_optimized.cpp src/main.cpp -o bin/matmul 

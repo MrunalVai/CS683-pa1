@@ -1,0 +1,348 @@
+================ naive SIZE=256 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=256 N=256 K=256 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          13.868        2.42      1.00x
+
+ Performance counter stats for './bin/matmul naive 256 256 256':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+       620,481,544      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+       178,970,178      cpu_core/cycles/                                                      
+
+       0.099461639 seconds time elapsed
+
+       0.096429000 seconds user
+       0.002982000 seconds sys
+
+
+================ simd SIZE=256 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=256 N=256 K=256 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          12.137        2.76      1.00x
+simd            yes           1.050       31.97     11.56x
+
+ Performance counter stats for './bin/matmul simd 256 256 256':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+       645,493,011      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+       190,177,966      cpu_core/cycles/                                                      
+
+       0.089475180 seconds time elapsed
+
+       0.087364000 seconds user
+       0.002008000 seconds sys
+
+
+================ prefetch SIZE=256 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=256 N=256 K=256 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          13.561        2.47      1.00x
+prefetch        yes           1.103       30.41     12.29x
+
+ Performance counter stats for './bin/matmul prefetch 256 256 256':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+       674,386,578      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+       201,538,636      cpu_core/cycles/                                                      
+
+       0.095938972 seconds time elapsed
+
+       0.088917000 seconds user
+       0.006993000 seconds sys
+
+
+================ optimized SIZE=256 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=256 N=256 K=256 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          13.110        2.56      1.00x
+optimized       yes           0.973       34.49     13.48x
+
+ Performance counter stats for './bin/matmul optimized 256 256 256':
+
+       296,696,842      cpu_atom/instructions/                                                  (0.90%)
+       666,429,776      cpu_core/instructions/                                                  (99.10%)
+       141,575,203      cpu_atom/cycles/                                                        (0.90%)
+       190,496,073      cpu_core/cycles/                                                        (99.10%)
+
+       0.097101775 seconds time elapsed
+
+       0.094916000 seconds user
+       0.002019000 seconds sys
+
+
+================ naive SIZE=512 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         128.779        2.08      1.00x
+
+ Performance counter stats for './bin/matmul naive 512 512 512':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+     4,891,353,724      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+     1,548,809,345      cpu_core/cycles/                                                      
+
+       0.773397649 seconds time elapsed
+
+       0.769761000 seconds user
+       0.003002000 seconds sys
+
+
+================ simd SIZE=512 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         105.397        2.55      1.00x
+simd            yes           8.859       30.30     11.90x
+
+ Performance counter stats for './bin/matmul simd 512 512 512':
+
+     3,490,496,850      cpu_atom/instructions/                                                  (0.28%)
+     5,079,537,086      cpu_core/instructions/                                                  (99.72%)
+     1,707,976,865      cpu_atom/cycles/                                                        (0.28%)
+     1,634,201,387      cpu_core/cycles/                                                        (99.72%)
+
+       0.692403582 seconds time elapsed
+
+       0.685890000 seconds user
+       0.006007000 seconds sys
+
+
+================ prefetch SIZE=512 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         106.312        2.52      1.00x
+prefetch        yes           8.884       30.21     11.97x
+
+ Performance counter stats for './bin/matmul prefetch 512 512 512':
+
+     <not counted>      cpu_atom/instructions/                                                  (0.00%)
+     5,316,743,442      cpu_core/instructions/                                                
+     <not counted>      cpu_atom/cycles/                                                        (0.00%)
+     1,639,600,033      cpu_core/cycles/                                                      
+
+       0.729972740 seconds time elapsed
+
+       0.719508000 seconds user
+       0.009993000 seconds sys
+
+
+================ optimized SIZE=512 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         105.728        2.54      1.00x
+optimized       yes           6.214       43.20     17.01x
+
+ Performance counter stats for './bin/matmul optimized 512 512 512':
+
+     1,219,766,876      cpu_atom/instructions/                                                  (0.20%)
+     5,231,516,178      cpu_core/instructions/                                                  (99.80%)
+     1,350,105,916      cpu_atom/cycles/                                                        (0.20%)
+     1,604,618,521      cpu_core/cycles/                                                        (99.80%)
+
+       0.683066799 seconds time elapsed
+
+       0.677698000 seconds user
+       0.004997000 seconds sys
+
+
+================ naive SIZE=1024 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         907.206        2.37      1.00x
+
+ Performance counter stats for './bin/matmul naive 1024 1024 1024':
+
+    25,270,299,467      cpu_atom/instructions/                                                  (0.18%)
+    38,928,186,005      cpu_core/instructions/                                                  (99.82%)
+    11,040,071,684      cpu_atom/cycles/                                                        (0.18%)
+    12,751,107,473      cpu_core/cycles/                                                        (99.82%)
+
+       5.446351808 seconds time elapsed
+
+       5.427017000 seconds user
+       0.016000000 seconds sys
+
+
+================ simd SIZE=1024 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         888.885        2.42      1.00x
+simd            yes         171.227       12.54      5.19x
+
+ Performance counter stats for './bin/matmul simd 1024 1024 1024':
+
+    26,537,703,315      cpu_atom/instructions/                                                  (0.17%)
+    40,342,385,926      cpu_core/instructions/                                                  (99.83%)
+    13,664,408,913      cpu_atom/cycles/                                                        (0.17%)
+    13,987,799,506      cpu_core/cycles/                                                        (99.83%)
+
+       6.231124280 seconds time elapsed
+
+       6.202256000 seconds user
+       0.022989000 seconds sys
+
+
+================ prefetch SIZE=1024 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         903.734        2.38      1.00x
+prefetch        yes          76.408       28.11     11.83x
+
+ Performance counter stats for './bin/matmul prefetch 1024 1024 1024':
+
+    21,406,545,531      cpu_atom/instructions/                                                  (1.07%)
+    42,514,152,641      cpu_core/instructions/                                                  (98.93%)
+     9,134,575,889      cpu_atom/cycles/                                                        (1.07%)
+    13,807,800,109      cpu_core/cycles/                                                        (98.93%)
+
+       5.955156989 seconds time elapsed
+
+       5.935446000 seconds user
+       0.014001000 seconds sys
+
+
+================ optimized SIZE=1024 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         893.073        2.40      1.00x
+optimized       yes          49.258       43.60     18.13x
+
+ Performance counter stats for './bin/matmul optimized 1024 1024 1024':
+
+    25,071,228,282      cpu_atom/instructions/                                                  (0.54%)
+    41,629,182,864      cpu_core/instructions/                                                  (99.46%)
+    13,098,375,952      cpu_atom/cycles/                                                        (0.54%)
+    13,339,726,607      cpu_core/cycles/                                                        (99.46%)
+
+       5.733525643 seconds time elapsed
+
+       5.706512000 seconds user
+       0.020987000 seconds sys
+
+
+================ naive SIZE=2048 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8219.393        2.09      1.00x
+
+ Performance counter stats for './bin/matmul naive 2048 2048 2048':
+
+   179,178,771,795      cpu_atom/instructions/                                                  (0.03%)
+   310,508,950,889      cpu_core/instructions/                                                  (99.97%)
+   101,294,003,637      cpu_atom/cycles/                                                        (0.03%)
+   112,152,947,112      cpu_core/cycles/                                                        (99.97%)
+
+      49.593501293 seconds time elapsed
+
+      49.487863000 seconds user
+       0.075964000 seconds sys
+
+
+================ simd SIZE=2048 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        7962.906        2.16      1.00x
+simd            yes        2808.701        6.12      2.84x
+
+ Performance counter stats for './bin/matmul simd 2048 2048 2048':
+
+   259,744,749,643      cpu_atom/instructions/                                                  (0.08%)
+   321,620,716,577      cpu_core/instructions/                                                  (99.92%)
+   128,321,633,414      cpu_atom/cycles/                                                        (0.08%)
+   125,834,109,180      cpu_core/cycles/                                                        (99.92%)
+
+      62.460137978 seconds time elapsed
+
+      62.355714000 seconds user
+       0.064977000 seconds sys
+
+
+================ prefetch SIZE=2048 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        7946.699        2.16      1.00x
+prefetch        yes         896.487       19.16      8.86x
+
+ Performance counter stats for './bin/matmul prefetch 2048 2048 2048':
+
+   210,810,562,783      cpu_atom/instructions/                                                  (0.02%)
+   337,457,459,252      cpu_core/instructions/                                                  (99.98%)
+    71,279,548,875      cpu_atom/cycles/                                                        (0.02%)
+   118,986,775,529      cpu_core/cycles/                                                        (99.98%)
+
+      52.546257360 seconds time elapsed
+
+      52.453656000 seconds user
+       0.071983000 seconds sys
+
+
+================ optimized SIZE=2048 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8585.272        2.00      1.00x
+optimized       yes         445.870       38.53     19.26x
+
+ Performance counter stats for './bin/matmul optimized 2048 2048 2048':
+
+   119,080,879,678      cpu_atom/instructions/                                                  (1.25%)
+   334,157,163,720      cpu_core/instructions/                                                  (98.75%)
+    62,925,409,019      cpu_atom/cycles/                                                        (1.25%)
+   116,379,038,915      cpu_core/cycles/                                                        (98.75%)
+
+      56.511712763 seconds time elapsed
+
+      56.410724000 seconds user
+       0.060983000 seconds sys
+
+

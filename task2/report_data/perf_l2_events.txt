@@ -1,0 +1,256 @@
+  l2_request.all
+       [Counts the total number of L2 Cache accesses. Counts on a per core
+  l2_request.hit
+       [Counts the number of L2 Cache accesses that resulted in a hit. Counts
+  l2_request.miss
+       [Counts the number of L2 Cache accesses that resulted in a miss. Counts
+        cache or TLB miss which hit in the L2,LLC,DRAM or MMIO (Non-DRAM).
+  mem_bound_stalls.ifetch_l2_hit
+        cache or TLB miss which hit in the L2 cache. Unit: cpu_atom]
+        miss which hit in the L2,LLC,DRAM or MMIO (Non-DRAM). Unit: cpu_atom]
+  mem_bound_stalls.load_l2_hit
+        which hit in the L2 cache. Unit: cpu_atom]
+  mem_load_uops_retired.l2_hit
+       [Counts the number of load uops retired that hit in the L2 cache
+  mem_load_uops_retired.l2_miss
+       [Counts the number of load uops retired that miss in the L2 cache
+       [Counts modified writebacks from L1 cache and L2 cache that have any
+  l1d_pend_miss.l2_stalls
+        L2 resources. Unit: cpu_core]
+  l2_lines_in.all
+       [L2 cache lines filling L2. Unit: cpu_core]
+  l2_lines_out.non_silent
+       [Modified cache lines that are evicted by L2 cache when triggered by an
+        L2 cache fill. Unit: cpu_core]
+  l2_lines_out.silent
+       [Non-modified cache lines that are silently dropped by L2 cache. Unit:
+  l2_lines_out.useless_hwpf
+       [Cache lines that have been L2 hardware prefetched but not used by
+  l2_request.all
+       [All accesses to L2 cache [This event is alias to L2_RQSTS.REFERENCES].
+  l2_request.miss
+       [Read requests with true-miss in L2 cache. [This event is alias to
+        L2_RQSTS.MISS]. Unit: cpu_core]
+  l2_rqsts.all_code_rd
+       [L2 code requests. Unit: cpu_core]
+  l2_rqsts.all_demand_data_rd
+       [Demand Data Read access L2 cache. Unit: cpu_core]
+  l2_rqsts.all_demand_miss
+       [Demand requests that miss L2 cache. Unit: cpu_core]
+  l2_rqsts.all_hwpf
+       [L2_RQSTS.ALL_HWPF. Unit: cpu_core]
+  l2_rqsts.all_rfo
+       [RFO requests to L2 cache. Unit: cpu_core]
+  l2_rqsts.code_rd_hit
+       [L2 cache hits when fetching instructions,code reads. Unit: cpu_core]
+  l2_rqsts.code_rd_miss
+       [L2 cache misses when fetching instructions. Unit: cpu_core]
+  l2_rqsts.demand_data_rd_hit
+       [Demand Data Read requests that hit L2 cache. Unit: cpu_core]
+  l2_rqsts.demand_data_rd_miss
+       [Demand Data Read miss L2 cache. Unit: cpu_core]
+  l2_rqsts.hwpf_miss
+       [L2_RQSTS.HWPF_MISS. Unit: cpu_core]
+  l2_rqsts.miss
+       [Read requests with true-miss in L2 cache. [This event is alias to
+        L2_REQUEST.MISS]. Unit: cpu_core]
+  l2_rqsts.references
+       [All accesses to L2 cache [This event is alias to L2_REQUEST.ALL].
+  l2_rqsts.rfo_hit
+       [RFO requests that hit L2 cache. Unit: cpu_core]
+  l2_rqsts.rfo_miss
+       [RFO requests that miss L2 cache. Unit: cpu_core]
+  l2_rqsts.swpf_hit
+       [SW prefetch requests that hit L2 cache. Unit: cpu_core]
+  l2_rqsts.swpf_miss
+       [SW prefetch requests that miss L2 cache. Unit: cpu_core]
+  l2_trans.l2_wb
+       [L2 writebacks that access L2 cache. Unit: cpu_core]
+  mem_load_retired.l2_hit
+       [Retired load instructions with L2 cache hits as data sources Supports
+  mem_load_retired.l2_miss
+       [Retired load instructions missed L2 cache as data sources Supports
+  mem_store_retired.l2_hit
+       [MEM_STORE_RETIRED.L2_HIT. Unit: cpu_core]
+        and prefetches to the core caches (L1 or L2) that hit in the L3 or
+  frontend_retired.l2_miss
+       [Retired Instructions who experienced Instruction L2 Cache true miss.
+  memory_activity.stalls_l2_miss
+       [Execution stalls while L2 cache miss demand cacheable load request is
+  cycle_activity.cycles_l2_miss
+       [Cycles while L2 cache miss demand load is outstanding. Unit: cpu_core]
+  cycle_activity.stalls_l2_miss
+       [Execution stalls while L2 cache miss demand load is outstanding. Unit:
+  tma_info_memory_l2mpki
+       [L2 cache true misses per kilo instruction for retired demand loads]
+  tma_l2_bound
+       [This metric estimates how often the CPU was stalled due to L2 cache
+  tma_info_memory_l2hpki_all
+       [L2 cache hits per kilo instruction for all request types (including
+  tma_info_memory_l2hpki_load
+       [L2 cache hits per kilo instruction for all demand loads (including
+  tma_info_memory_l2mpki
+       [L2 cache true misses per kilo instruction for retired demand loads]
+  tma_info_memory_l2mpki_all
+       [L2 cache ([RKL+] true) misses per kilo instruction for all request
+  tma_info_memory_l2mpki_load
+       [L2 cache ([RKL+] true) misses per kilo instruction for all demand
+  tma_l2_bound
+       [This metric estimates how often the CPU was stalled due to L2 cache
+  tma_info_memory_l2mpki_rfo
+       [Offcore requests (L2 cache miss) per kilo instruction for demand RFOs]
+  tma_info_botlnk_l2_dsb_bandwidth
+  tma_info_botlnk_l2_dsb_misses
+  tma_info_botlnk_l2_dsb_bandwidth
+  tma_info_botlnk_l2_dsb_misses
+  tma_info_botlnk_l2_ic_misses
+  tma_info_botlnk_l2_dsb_bandwidth
+  tma_code_l2_hit
+        instruction cache misses that hit in the L2 cache]
+  tma_code_l2_miss
+        instruction cache misses that miss in the L2 cache]
+  tma_info_botlnk_l2_ic_misses
+  tma_code_l2_hit
+        instruction cache misses that hit in the L2 cache]
+  tma_code_l2_miss
+        instruction cache misses that miss in the L2 cache]
+  tma_info_botlnk_l2_ic_misses
+  tma_info_frontend_l2mpki_code
+       [L2 cache true code cacheline misses per kilo instruction]
+  tma_info_frontend_l2mpki_code_all
+       [L2 cache speculative code cacheline misses per kilo instruction]
+  tma_info_memory_latency_load_l2_miss_latency
+       [Average Latency for L2 cache miss demand Loads]
+  tma_info_memory_core_l2_cache_fill_bw_2t
+       [Average per-core data fill bandwidth to the L2 cache [GB / sec]]
+  tma_info_memory_l2_cache_fill_bw
+       [Average per-thread data fill bandwidth to the L2 cache [GB / sec]]
+  tma_info_memory_l2hpki_all
+       [L2 cache hits per kilo instruction for all request types (including
+  tma_info_memory_l2hpki_load
+       [L2 cache hits per kilo instruction for all demand loads (including
+  tma_info_memory_l2mpki
+       [L2 cache true misses per kilo instruction for retired demand loads]
+  tma_info_memory_l2mpki_all
+       [L2 cache ([RKL+] true) misses per kilo instruction for all request
+  tma_info_memory_l2mpki_load
+       [L2 cache ([RKL+] true) misses per kilo instruction for all demand
+  tma_info_memory_core_l2_cache_fill_bw_2t
+       [Average per-core data fill bandwidth to the L2 cache [GB / sec]]
+  tma_info_memory_l2_cache_fill_bw
+       [Average per-thread data fill bandwidth to the L2 cache [GB / sec]]
+  tma_l2_bound
+       [This metric estimates how often the CPU was stalled due to L2 cache
+  tma_l2_hit_latency
+        that hit the L2 cache under unloaded scenarios (possibly L2 latency
+  tma_info_memory_latency_data_l2_mlp
+       [Average Parallel L2 cache miss data reads]
+  tma_info_memory_latency_load_l2_mlp
+       [Average Parallel L2 cache miss demand Loads]
+  tma_info_memory_latency_load_l2_miss_latency
+       [Average Latency for L2 cache miss demand Loads]
+  tma_code_l2_hit
+        instruction cache misses that hit in the L2 cache]
+  tma_code_l2_miss
+        instruction cache misses that miss in the L2 cache]
+  tma_info_memory_l2mpki_all
+       [L2 cache ([RKL+] true) misses per kilo instruction for all request
+  tma_info_memory_l2mpki_rfo
+       [Offcore requests (L2 cache miss) per kilo instruction for demand RFOs]
+  tma_info_memory_latency_data_l2_mlp
+       [Average Parallel L2 cache miss data reads]
+  tma_info_memory_latency_load_l2_miss_latency
+       [Average Latency for L2 cache miss demand Loads]
+  tma_info_memory_latency_load_l2_mlp
+       [Average Parallel L2 cache miss demand Loads]
+       [Rate of L2 HW prefetched lines that were not used by demand accesses]
+TmaL2: [Grouping from Top-down Microarchitecture Analysis Metrics spreadsheet]
+  tma_l2_bound
+       [This metric estimates how often the CPU was stalled due to L2 cache
+TopdownL2: [Metrics for top-down breakdown at level 2]
+  tma_l2_bound
+       [This metric estimates how often the CPU was stalled due to L2 cache
+  tma_code_l2_hit
+        instruction cache misses that hit in the L2 cache]
+  tma_code_l2_miss
+        instruction cache misses that miss in the L2 cache]
+  tma_l2_hit_latency
+        that hit the L2 cache under unloaded scenarios (possibly L2 latency
+  tma_info_load_miss_bound_%_loadmissbound_with_l2hit
+        an L1 miss that hit the L2]
+  tma_info_load_miss_bound_%_loadmissbound_with_l2miss
+        an L1 miss that subsequently misses in the L2]
+  lpm_cs_l2_misses
+       [L2 misses per context switch]
+lpm_l2: [L2 data cache analysis]
+  lpm_l2_code_hits
+       [L2 cache code hits]
+  lpm_l2_code_misses
+       [L2 cache code misses per second]
+  lpm_l2_code_requests
+       [L2 cache code requests per second]
+  lpm_l2_rd_hits
+       [L2 cache data read hits]
+  lpm_l2_rd_misses
+       [L2 cache data read misses per second]
+  lpm_l2_rd_requests
+       [L2 cache data read requests per second]
+  lpm_l2_rfo_hits
+       [L2 cache request for ownership (RFO) hits]
+  lpm_l2_rfo_misses
+       [L2 cache request for ownership (RFO) misses per second]
+  lpm_l2_rfo_requests
+       [L2 cache request for ownership (RFO) requests per second]
+  lpm_l2_totals_in
+       [L2 cache total in per second]
+lpm_l2_code:
+  lpm_l2_code_hits
+       [L2 cache code hits]
+  lpm_l2_code_misses
+       [L2 cache code misses per second]
+  lpm_l2_code_requests
+       [L2 cache code requests per second]
+lpm_l2_rd:
+  lpm_l2_rd_hits
+       [L2 cache data read hits]
+  lpm_l2_rd_misses
+       [L2 cache data read misses per second]
+  lpm_l2_rd_requests
+       [L2 cache data read requests per second]
+lpm_l2_rfo:
+  lpm_l2_rfo_hits
+       [L2 cache request for ownership (RFO) hits]
+  lpm_l2_rfo_misses
+       [L2 cache request for ownership (RFO) misses per second]
+  lpm_l2_rfo_requests
+       [L2 cache request for ownership (RFO) requests per second]
+lpm_l2_totals:
+  lpm_l2_totals_in
+       [L2 cache total in per second]
+tma_L2_group: [Metrics for top-down breakdown at level 2]
+  tma_l2_bound
+       [This metric estimates how often the CPU was stalled due to L2 cache
+  tma_code_l2_hit
+        instruction cache misses that hit in the L2 cache]
+  tma_code_l2_miss
+        instruction cache misses that miss in the L2 cache]
+  tma_l2_hit_latency
+        that hit the L2 cache under unloaded scenarios (possibly L2 latency
+  tma_code_l2_hit
+        instruction cache misses that hit in the L2 cache]
+  tma_code_l2_miss
+        instruction cache misses that miss in the L2 cache]
+tma_info_ifetch_miss_bound_%_ifetchmissbound_with_l2hit:
+  tma_info_ifetch_miss_bound_%_ifetchmissbound_with_l2hit
+        the L2]
+tma_info_ifetch_miss_bound_%_ifetchmissbound_with_l2miss:
+  tma_info_ifetch_miss_bound_%_ifetchmissbound_with_l2miss
+        hit in the L2]
+  tma_info_botlnk_l2_dsb_bandwidth
+  tma_info_botlnk_l2_dsb_misses
+  tma_info_botlnk_l2_ic_misses
+tma_l2_bound_group: [Metrics contributing to tma_l2_bound category]
+  tma_l2_hit_latency
+        that hit the L2 cache under unloaded scenarios (possibly L2 latency
+  tma_l2_bound
+       [This metric estimates how often the CPU was stalled due to L2 cache

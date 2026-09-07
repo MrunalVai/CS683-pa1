@@ -1,0 +1,5 @@
+  sw_prefetch_access.any
+  sw_prefetch_access.nta
+  sw_prefetch_access.prefetchw
+  sw_prefetch_access.t0
+  sw_prefetch_access.t1_t2

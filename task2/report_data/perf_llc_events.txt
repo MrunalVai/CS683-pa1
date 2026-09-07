@@ -1,0 +1,20 @@
+       [Counts the number of cacheable memory requests that miss in the LLC.
+       [Counts the number of cacheable memory requests that access the LLC.
+        cache or TLB miss which hit in the L2,LLC,DRAM or MMIO (Non-DRAM).
+  mem_bound_stalls.ifetch_llc_hit
+        cache or TLB miss which hit in the LLC or other core with HITE/F/M.
+        miss which hit in the L2,LLC,DRAM or MMIO (Non-DRAM). Unit: cpu_atom]
+  mem_bound_stalls.load_llc_hit
+        which hit in the LLC or other core with HITE/F/M. Unit: cpu_atom]
+  llc-load-misses
+  llc-loads
+  llc-store-misses
+  llc-stores
+  llc-load-misses
+  llc-loads
+  llc-store-misses
+  llc-stores
+        cores,processor graphic units,or LLC. Unit: uncore_arb]
+  llc_miss_rate
+       [LLC miss rate]
+       [Percentage of total wallclock cycles where CPUs are in low power state

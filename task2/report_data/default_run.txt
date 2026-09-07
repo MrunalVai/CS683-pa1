@@ -1,0 +1,17 @@
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+[smoke] all stages match the reference on a small input.
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (GRADED) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        1414.086        1.52      1.00x
+simd            yes         307.630        6.98      4.60x
+prefetch        yes         105.716       20.31     13.38x
+optimized       yes          65.118       32.98     21.72x
+--------------------------------------------------------------
+correctness : 30 / 30   (3 of 3 stages correct)
+optimized   : 21.72x  ->  55 / 70  speedup points
+TOTAL       : 85 / 100
+
+hint: cache blocking's payoff grows with size. Try a bigger matmul, e.g.
+      ./bin/matmul all 2048 2048 2048   (watch simd vs optimized diverge).

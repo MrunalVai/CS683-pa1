@@ -1,0 +1,25 @@
+bash llama/run_demo.sh
+>>> llama.cpp matmul demo (tag b5731, 1 thread)
+>>> cloning llama.cpp @ b5731
+Cloning into '/home/mrunal-vairagade/Downloads/CS683-pa1/task2/llama/llama.cpp'...
+Note: switching to 'bb16041caef45cd4348cd6f84906b5dfec7a1f6a'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+>>> resetting llama.cpp to pristine
+>>> building STOCK llama-cli
+llama/run_demo.sh: line 43: cmake: command not found
+make: *** [Makefile:48: llama-demo] Error 127

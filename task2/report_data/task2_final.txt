@@ -1,0 +1,60 @@
+================ SIZE=128 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=128 N=128 K=128 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes           4.431        0.95      1.00x
+simd            yes           0.262       16.04     16.94x
+prefetch        yes           0.234       17.90     18.91x
+optimized       yes           0.172       24.36     25.74x
+================ SIZE=256 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=256 N=256 K=256 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes          13.847        2.42      1.00x
+simd            yes           1.103       30.41     12.55x
+prefetch        yes           1.099       30.54     12.60x
+optimized       yes           0.803       41.76     17.23x
+================ SIZE=512 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=512 N=512 K=512 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         171.135        1.57      1.00x
+simd            yes          14.897       18.02     11.49x
+prefetch        yes          19.280       13.92      8.88x
+optimized       yes          13.064       20.55     13.10x
+================ SIZE=1024 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1024 N=1024 K=1024 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes         942.047        2.28      1.00x
+simd            yes         144.101       14.90      6.54x
+prefetch        yes          77.250       27.80     12.19x
+optimized       yes          48.308       44.45     19.50x
+================ SIZE=1536 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=1536 N=1536 K=1536 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        3283.365        2.21      1.00x
+simd            yes         732.961        9.89      4.48x
+prefetch        yes         275.385       26.32     11.92x
+optimized       yes         177.875       40.75     18.46x
+================ SIZE=2048 ================
+CS683 PA-1 Task 2  matrix multiplication optimization harness
+
+=== Workload  M=2048 N=2048 K=2048 seed=1234 (not graded) ===
+stage           correct    time(ms)     GFLOP/s    speedup
+--------------------------------------------------------------
+naive (ref)     yes        8446.529        2.03      1.00x
+simd            yes        2625.052        6.54      3.22x
+prefetch        yes         729.900       23.54     11.57x
+optimized       yes         462.566       37.14     18.26x

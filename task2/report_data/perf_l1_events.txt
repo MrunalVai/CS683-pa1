@@ -1,0 +1,5 @@
+  l1-dcache-loads
+  l1-dcache-stores
+  l1-dcache-load-misses
+  l1-dcache-loads
+  l1-dcache-stores
